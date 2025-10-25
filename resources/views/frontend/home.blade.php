@@ -170,7 +170,7 @@
                         <div class="category-card single">
                             <div class="box-img global-img"><img src="assets/img/category/category_1_3.jpg"
                                     alt="Image"></div>
-                            <h3 class="box-title"><a href="{{ route('travelinsurance') }}"">Travel Insurance</a></h3>
+                            <h3 class="box-title"><a href="{{ route('travelinsurance') }}">Travel Insurance</a></h3>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -316,7 +316,7 @@
         </div>
     </div>
 
-    <div class="about-area position-relative overflow-hidden space" id="about-sec">
+   {{--  <div class="about-area position-relative overflow-hidden space" id="about-sec">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
@@ -370,9 +370,9 @@
             <div class="shape-mockup about-emoji d-none d-xxl-block" data-bottom="25%" data-right="5%"><img
                     src="assets/img/icon/emoji.png" alt=""></div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="gallery-area">
+    <div class="gallery-area mt-5">
         <div class="container th-container">
             <div class="title-area text-center"><span class="sub-title">Capture Your Travel Moments</span>
                 <h2 class="sec-title">Our Travel Gallery</h2>

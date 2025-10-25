@@ -45,7 +45,7 @@
             width: 200px;
             bottom: 300%;
             right: 150%;
-            animation: fling-left 1.8s,fling-top 1.2s;
+            animation: fling-left 1.8s, fling-top 1.2s;
             animation-fill-mode: forwards;
         }
 
@@ -236,7 +236,7 @@
     <header class="th-header header-layout1 header-layout2">
         <div class="header-top">
             <div class="container th-container">
-                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                <div class="row justify-content-center justify-content-lg-end align-items-center">
                     <div class="col-auto d-none d-md-block">
                         <div class="header-links">
                             <ul>
@@ -255,26 +255,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-auto">
-                        <div class="header-right">
-                            {{-- <div class="currency-menu">
-                                <select class="form-select nice-select">
-                                    <option selected="">language</option>
-                                    <option>CNY</option>
-                                    <option>EUR</option>
-                                    <option>AUD</option>
-                                </select>
-                            </div> --}}
-                            <div class="header-links">
-                                <ul>
-                                    {{-- <li class="d-none d-md-inline-block"><a href="#">FAQ</a></li>
-                                    <li class="d-none d-md-inline-block"><a href="#">Support</a></li> --}}
-                                    {{-- <li><a href="{{ route('contactus') }}" class="popup-content">Book Now<i
-                                        class="fa-regular fa-user"></i></a></li> --}}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

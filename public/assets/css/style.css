@@ -24542,15 +24542,15 @@ filter: brightness(0) invert(1);
 .counter-card {
     position: relative;
     background-color: #e9f6f9;
-    padding: 93px 28px;
-    width: 264px;
-    height: 264px;
+    padding: 49px 28px;
+    width: 225px;
+    height: 225px;
     display: block;
     margin: auto;
     text-align: center;
     border-radius: 50%;
     z-index: 2;
-    margin-top: 158px;
+    margin-top: 94px;
 }
 
 .counter-card.style2 {
@@ -24610,8 +24610,8 @@ filter: brightness(0) invert(1);
 .counter-card .counter-shape {
     position: absolute;
     inset: -24px;
-    width: 312px;
-    height: 312px;
+    width: 272px;
+    height: 272px;
     border-radius: 50%;
     border: 1px solid var(--theme-color);
     -webkit-transition: all 0.4s ease-in-out;
@@ -24630,7 +24630,7 @@ filter: brightness(0) invert(1);
     position: absolute;
     top: unset;
     bottom: 55px;
-    right: 15px;
+    right: 7px;
     width: 24px;
     height: 24px;
     display: block;
@@ -24650,8 +24650,8 @@ filter: brightness(0) invert(1);
 .counter-card .counter-shape:before {
     content: "";
     position: absolute;
-    bottom: 20%;
-    right: 7%;
+    bottom: 23%;
+    right: 5%;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -24684,8 +24684,8 @@ filter: brightness(0) invert(1);
 }
 
 .counter-card-wrap:nth-child(even) .counter-card .counter-shape span {
-    top: 24px;
-    right: 43px;
+    top: 18px;
+    right: 42px;
 }
 
 @media (max-width: 767px) {
@@ -24698,8 +24698,8 @@ filter: brightness(0) invert(1);
 .counter-card-wrap:nth-child(even) .counter-card .counter-shape:before,
 .counter-card-wrap:nth-child(even) .counter-card .counter-shape:after {
     bottom: unset;
-    top: 10%;
-    right: 16%;
+    top: 9%;
+    right: 18%;
 }
 
 .counter-card .box-number {
