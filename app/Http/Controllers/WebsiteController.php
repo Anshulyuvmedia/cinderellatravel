@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Blog;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,9 @@ class WebsiteController extends Controller
     //
     public function home()
     {
-        return view('frontend.home');
+        $blogs = Blog::latest()->take(3)->get();
+        // dd( $blogs);
+        return view('frontend.home', compact('blogs'));
     }
 
     public function aboutus()
@@ -23,11 +26,14 @@ class WebsiteController extends Controller
     }
     public function blogs()
     {
-        return view('frontend.blogs');
+        $blogs = Blog::orderByDesc('created_at')->paginate(6);
+        return view('frontend.blogs', compact('blogs'));
     }
-    public function blogdetail()
+    public function blogdetail($id)
     {
-        return view('frontend.blogdetail');
+        $details = Blog::find($id);
+        $recentblogs = Blog::orderBy('created_at', 'desc')->get();
+        return view('frontend.blogdetail', compact('details', 'recentblogs'));
     }
     public function demo()
     {

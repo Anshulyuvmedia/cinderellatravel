@@ -166,48 +166,48 @@
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-5">
-                    <aside class="sidebar-area style3" data-aos="fade-left" data-aos-delay="200">
-                        <div class="widget widget_categories">
-                            <h3 class="widget_title">Destinations</h3>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                        Europe
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                        Asia
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                        Dubai
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                        USA
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                        Canada
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                        Africa
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <aside class="sidebar-area style3 position-sticky "  style="top:150px" >
+                        {{--   <div class="widget widget_categories">
+                        <h3 class="widget_title">Destinations</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                                    Europe
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                                    Asia
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                                    Dubai
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                                    USA
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                                    Canada
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                                    Africa
+                                </a>
+                            </li>
+                        </ul>
+                    </div>--}}
 
                         <div class="widget widget_tag_cloud" data-aos="fade-left" data-aos-delay="300">
                             <h3 class="widget_title">Contact Us</h3>
