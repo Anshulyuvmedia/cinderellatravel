@@ -1146,7 +1146,7 @@
                         comment.</label>
                 </div>
                 <div class="col-12 form-group mb-0" data-aos="fade-up" data-aos-delay="2200">
-                    <button class="th-btn">Send Message<img src="{{ asset('assets/img/icon/plane2.svg') }}"
+                    <button class="th-btn style3 th-icon">Send Message<img src="{{ asset('assets/img/icon/plane2.svg') }}"
                             alt=""></button>
                 </div>
             </div>

@@ -43,7 +43,7 @@
             width: 200px;
             bottom: 300%;
             left: -150%;
-                transform: translateX(0);
+            transform: translateX(0);
             animation: fling-left 1.8s, fling-top 1.2s;
             animation-fill-mode: forwards;
         }
@@ -70,7 +70,6 @@
                 bottom: 100%;
             }
         }
-
     </style>
 </head>
 
@@ -189,27 +188,27 @@
                         <a class="active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li><a href="#">About Us</a></li>
-                   {{--   <li class="menu-item-has-children"><a href="#">Destination</a>
+                    {{-- <li class="menu-item-has-children"><a href="#">Destination</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('europe') }}">Europe</a></li>
-                            <li><a href="{{ route('asia') }}">Asia</a></li>
-                            <li><a href="{{ route('dubai') }}">Dubai</a></li>
-                            <li><a href="{{ route('usa') }}">USA</a></li>
-                            <li><a href="{{ route('canada') }}">Canada</a></li>
-                            <li><a href="{{ route('africa') }}">Africa</a></li>
-                        </ul>
-                    </li>--}}
-                    <li class="menu-item-has-children"><a href="#">Service</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('airticketing') }}">Air Ticketing</a></li>
-                            <li><a href="{{ route('travelvisa') }}">Travel Visa</a></li>
-                            <li><a href="{{ route('travelinsurance') }}">Travel Insurance</a></li>
-                            <li><a href="{{ route('hotelbooking') }}">Hotel Booking</a></li>
-                            <li><a href="{{ route('holidaypackges') }}">Holiday Packges</a></li>
-                        </ul>
-                    </li>
-                    <li class=""><a href="{{ route('careers') }}">Careers</a></li>
-                    <li><a href="{{ route('contactus') }}">Contact us</a></li>
+                    <li><a href="{{ route('asia') }}">Asia</a></li>
+                    <li><a href="{{ route('dubai') }}">Dubai</a></li>
+                    <li><a href="{{ route('usa') }}">USA</a></li>
+                    <li><a href="{{ route('canada') }}">Canada</a></li>
+                    <li><a href="{{ route('africa') }}">Africa</a></li>
+                </ul>
+                </li>--}}
+                <li class="menu-item-has-children"><a href="#">Service</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ route('airticketing') }}">Air Ticketing</a></li>
+                        <li><a href="{{ route('travelvisa') }}">Travel Visa</a></li>
+                        <li><a href="{{ route('travelinsurance') }}">Travel Insurance</a></li>
+                        <li><a href="{{ route('hotelbooking') }}">Hotel Booking</a></li>
+                        <li><a href="{{ route('holidaypackges') }}">Holiday Packges</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="{{ route('careers') }}">Careers</a></li>
+                <li><a href="{{ route('contactus') }}">Contact us</a></li>
                 </ul>
             </div>
         </div>
@@ -266,7 +265,7 @@
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="{{ route('home') }}">
-                                    <img src="{{ asset('assets/img/logo_l.png') }}" alt="Cinderella" width="100">
+                                    <img src="{{ asset('assets/img/logo_l.png') }}" alt="Cinderella" width="250">
                                 </a>
                             </div>
                         </div>
@@ -275,29 +274,29 @@
                                 <ul>
                                     <li class=""><a class=" {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a></li>
                                     <li><a class=" {{ request()->routeIs('aboutus') ? 'active' : '' }}" href="{{ route('aboutus') }}">About Us</a></li>
-                                  {{--   <li class="menu-item-has-children"><a href="#">Destination</a>
+                                    {{-- <li class="menu-item-has-children"><a href="#">Destination</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('europe') }}">Europe</a></li>
-                                            <li><a href="{{ route('asia') }}">Asia</a></li>
-                                            <li><a href="{{ route('dubai') }}">Dubai</a></li>
-                                            <li><a href="{{ route('usa') }}">USA</a></li>
-                                            <li><a href="{{ route('canada') }}">Canada</a></li>
-                                            <li><a href="{{ route('africa') }}">Africa</a></li>
-                                        </ul>
-                                    </li>--}} 
-                                    <li class="menu-item-has-children"><a class=" {{ request()->routeIs('airticketing') || request()->routeIs('travelvisa') || request()->routeIs('travelinsurance') || request()->routeIs('hotelbooking') || request()->routeIs('holidaypackges')  ? 'active' : '' }}" href="#">Services</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="{{ route('airticketing') }}">Air Ticketing</a></li>
-                                            <li><a href="{{ route('travelvisa') }}">Travel Visa</a></li>
-                                            <li><a href="{{ route('travelinsurance') }}">Travel Insurance</a></li>
-                                            <li><a href="{{ route('hotelbooking') }}">Hotel Booking</a></li>
-                                            <li><a href="{{ route('holidaypackges') }}">Holiday Packges</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class=""><a class=" {{ request()->routeIs('careers') ? 'active' : '' }}" href="{{ route('careers') }}">Careers</a></li>
-                                    <li class=""><a class=" {{ request()->routeIs('blogs') || request()->routeIs('blogdetail')  ? 'active' : '' }}" href="{{ route('blogs') }}">Blogs</a>
-                                    </li>
-                                    <li><a class=" {{ request()->routeIs('contactus') ? 'active' : '' }}" href="{{ route('contactus') }}">Contact us</a></li>
+                                    <li><a href="{{ route('asia') }}">Asia</a></li>
+                                    <li><a href="{{ route('dubai') }}">Dubai</a></li>
+                                    <li><a href="{{ route('usa') }}">USA</a></li>
+                                    <li><a href="{{ route('canada') }}">Canada</a></li>
+                                    <li><a href="{{ route('africa') }}">Africa</a></li>
+                                </ul>
+                                </li>--}}
+                                <li class="menu-item-has-children"><a class=" {{ request()->routeIs('airticketing') || request()->routeIs('travelvisa') || request()->routeIs('travelinsurance') || request()->routeIs('hotelbooking') || request()->routeIs('holidaypackges')  ? 'active' : '' }}" href="#">Services</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('airticketing') }}">Air Ticketing</a></li>
+                                        <li><a href="{{ route('travelvisa') }}">Travel Visa</a></li>
+                                        <li><a href="{{ route('travelinsurance') }}">Travel Insurance</a></li>
+                                        <li><a href="{{ route('hotelbooking') }}">Hotel Booking</a></li>
+                                        <li><a href="{{ route('holidaypackges') }}">Holiday Packges</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a class=" {{ request()->routeIs('careers') ? 'active' : '' }}" href="{{ route('careers') }}">Careers</a></li>
+                                <li class=""><a class=" {{ request()->routeIs('blogs') || request()->routeIs('blogdetail')  ? 'active' : '' }}" href="{{ route('blogs') }}">Blogs</a>
+                                </li>
+                                <li><a class=" {{ request()->routeIs('contactus') ? 'active' : '' }}" href="{{ route('contactus') }}">Contact us</a></li>
                                 </ul>
                             </nav><button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
                         </div>
@@ -318,90 +317,74 @@
 
 
 
-    <footer class="footer-wrapper footer-layout1">
-        <div class="widget-area">
+    <footer class="footer-wrapper footer-layout1" data-bg-src="{{ asset('assets/img/bg/map.png') }}">
+        <div class="widget-area" >
             <div class="container">
-                {{-- <div class="newsletter-area">
-                    <div class="newsletter-top">
-                        <div class="row gy-4 align-items-center">
-                            <div class="col-lg-5">
-                                <h2 class="newsletter-title text-capitalize mb-0">get updated the latest newsletter
-                                </h2>
-                            </div>
-                            <div class="col-lg-7">
-                                <form class="newsletter-form"><input class="form-control" type="email"
-                                        placeholder="Enter Email" required=""> <button type="submit"
-                                        class="th-btn style3">Subscribe Now <img
-                                            src="{{ asset('assets/img/icon/plane.svg') }}" alt=""></button>
-                </form>
-            </div>
-        </div>
-        </div>
-        </div> --}}
-        <div class="row justify-content-between">
-            <div class="col-sm-6  col-md-5">
-                <div class="widget footer-widget">
-                    <div class="th-widget-about">
-                        <div class="about-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo_l.png') }}" alt="Cinderella" width="150"></a></div>
-                        <p class="about-text">Rapidiously myocardinate cross-platform intellectual capital
-                            model. Appropriately create interactive infrastructures</p>
-                        <div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="widget widget_nav_menu footer-widget">
-                    <h3 class="widget_title">Quick Links</h3>
-                    <div class="menu-all-pages-container">
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Our Service</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Tour Booking Now</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="widget footer-widget">
-                    <h3 class="widget_title">Address</h3>
-                    <div class="th-widget-contact">
-                        <div class="info-box_text">
-                            <div class="icon"><img src="{{ asset('assets/img/icon/phone.svg') }}" alt="img"></div>
-                            <div class="details">
-                                <p><a href="tel:23278676849" class="info-box_link">+23278676849</a></p>
-                            </div>
-                        </div>
-                        <div class="info-box_text">
-                            <div class="icon"><img src="{{ asset('assets/img/icon/envelope.svg') }}" alt="img"></div>
-                            <div class="details">
-                                <p><a href="mailto:salesfna@lamairatravel.com" class="info-box_link">salesfna@lamairatravel.com</a></p>
-                            </div>
-                        </div>
-                        <div class="info-box_text">
-                            <div class="icon"><img src="{{ asset('assets/img/icon/location-dot.svg') }}" alt="img">
-                            </div>
-                            <div class="details">
-                                <p> 51A Wilkinson road,<br> Freetown, Sierra Leone</p>
+
+                <div class="row justify-content-between">
+                    <div class="col-sm-6  col-md-5">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo_l.png') }}" alt="Cinderella" width="65%"></a></div>
+                                <p class="about-text">Rapidiously myocardinate cross-platform intellectual capital
+                                    model. Appropriately create interactive infrastructures</p>
+                                <div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Service</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Tour Booking Now</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Address</h3>
+                            <div class="th-widget-contact">
+                                <div class="info-box_text">
+                                    <div class="icon"><img src="{{ asset('assets/img/icon/phone.svg') }}" alt="img"></div>
+                                    <div class="details">
+                                        <p class="text-white"><a href="tel:23278676849" class="info-box_link">+23278676849</a></p>
+                                    </div>
+                                </div>
+                                <div class="info-box_text">
+                                    <div class="icon"><img src="{{ asset('assets/img/icon/envelope.svg') }}" alt="img"></div>
+                                    <div class="details">
+                                        <p class="text-white"><a href="mailto:salesfna@lamairatravel.com" class="info-box_link">salesfna@lamairatravel.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="info-box_text">
+                                    <div class="icon"><img src="{{ asset('assets/img/icon/location-dot.svg') }}" alt="img">
+                                    </div>
+                                    <div class="details">
+                                        <p class="text-white"> 51A Wilkinson road,<br> Freetown, Sierra Leone</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-       
         </div>
-        </div>
-        </div>
-        <div class="copyright-wrap" data-bg-src="{{ asset('assets/img/bg/copyright_bg_1.jpg') }}">
+        <div class="copyright-wrap bg-transparent" >
             <div class="container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-6">
-                        <p class="copyright-text">Copyright 2025 <a href="{{ route('home') }}">Lamaira</a>. All
+                    <div class="col-md-12">
+                        <p class="copyright-text  text-center fs-6">Copyright 2025 <a href="{{ route('home') }}">Lamaira</a>. All
                             Rights
                             Reserved.</p>
                     </div>
-              
+
                 </div>
             </div>
         </div>
@@ -474,7 +457,6 @@
             // once: true, // Animations trigger only once
             offset: 100 // Trigger animations 100px before element enters viewport
         });
-
     </script>
     <script src="https://unpkg.com/@studio-freight/lenis"></script>
 
@@ -493,7 +475,6 @@
         }
 
         requestAnimationFrame(raf)
-
     </script>
 
 </body>

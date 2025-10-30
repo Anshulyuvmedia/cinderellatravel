@@ -196,7 +196,7 @@ h5,
 .h6,
 h6 {
     font-family: var(--title-font);
-    color: var(--title-color);
+    color: #4d96a8;
     text-transform: none;
     font-weight: 700;
     line-height: 1.4;
@@ -7375,7 +7375,7 @@ ol.wp-block-rss {
     padding: 0;
     margin-bottom: 21px;
     font-family: var(--body-font);
-    color: #000000;
+    color: #ffffff;
     display: block;
     max-width: 100%;
     width: -webkit-max-content;
@@ -7493,7 +7493,7 @@ ol.wp-block-rss {
 }
 
 .th-widget-about .about-text {
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 20px;
     margin-top: -0.5em;
 }
@@ -9081,6 +9081,7 @@ ol.wp-block-rss {
     position: relative;
     z-index: 2;
     overflow: hidden;
+    background-color: black;
 }
 
 .widget-area {

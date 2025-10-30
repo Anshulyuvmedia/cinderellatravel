@@ -311,6 +311,381 @@
                         </div>
                     </div>
                 </div>
+                  <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Maldives</a></h4><span
+                                        class="destination-subtitle">15 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_2.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Thailand</a></h4><span
+                                        class="destination-subtitle">22 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_3.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Belgium</a></h4><span
+                                        class="destination-subtitle">25 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_4.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Bali</a></h4><span
+                                        class="destination-subtitle">28 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_5.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Dubai</a></h4><span
+                                        class="destination-subtitle">30 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Maldives</a></h4><span
+                                        class="destination-subtitle">15 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_2.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Thailand</a></h4><span
+                                        class="destination-subtitle">22 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_3.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Belgium</a></h4><span
+                                        class="destination-subtitle">25 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_4.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Bali</a></h4><span
+                                        class="destination-subtitle">28 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_5.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Dubai</a></h4><span
+                                        class="destination-subtitle">30 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Maldives</a></h4><span
+                                        class="destination-subtitle">15 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_2.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Thailand</a></h4><span
+                                        class="destination-subtitle">22 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_3.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Belgium</a></h4><span
+                                        class="destination-subtitle">25 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_4.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Bali</a></h4><span
+                                        class="destination-subtitle">28 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_5.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Dubai</a></h4><span
+                                        class="destination-subtitle">30 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Maldives</a></h4><span
+                                        class="destination-subtitle">15 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_2.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Thailand</a></h4><span
+                                        class="destination-subtitle">22 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_3.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Belgium</a></h4><span
+                                        class="destination-subtitle">25 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_4.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Bali</a></h4><span
+                                        class="destination-subtitle">28 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_5.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Dubai</a></h4><span
+                                        class="destination-subtitle">30 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Maldives</a></h4><span
+                                        class="destination-subtitle">15 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_2.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Thailand</a></h4><span
+                                        class="destination-subtitle">22 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_3.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Belgium</a></h4><span
+                                        class="destination-subtitle">25 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_4.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Bali</a></h4><span
+                                        class="destination-subtitle">28 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="destination-box gsap-cursor">
+                        <div class="destination-img"><img src="assets/img/destination/destination_1_5.jpg"
+                                alt="destination image">
+                            <div class="destination-content">
+                                <div class="media-left">
+                                    <h4 class="box-title"><a href="#">Dubai</a></h4><span
+                                        class="destination-subtitle">30 Holiday Packages</span>
+                                </div>
+                                <div class=""><a href="#" class="th-btn style2 th-icon">View Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -760,11 +1135,12 @@
                             </div>
                             <div class="blog-img global-img col-md-5">
                                 <img src="{{asset('adminAssets/images/Blogs/'.$data->blogthumbnail)}}"
-                                    alt="blog image"></div>
+                                    alt="blog image">
+                            </div>
                         </div>
                     </div>
                     @endforeach
-                  {{--    <div class="col-12 blog-grid4_wrapp">
+                    {{-- <div class="col-12 blog-grid4_wrapp">
                         <div class="blog-grid4 th-ani style4 mt-24">
                             <div class="box-content">
                                 <div class="blog-meta"><a class="author" href="#">Aug 20, 2025</a> <a

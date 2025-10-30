@@ -101,7 +101,7 @@
                                     I comment.</label>
                             </div>
                             <div class="col-12 form-group mb-0">
-                                <button class="th-btn">Send Message<img src="{{ asset('assets/img/icon/plane2.svg') }}"
+                                <button class="th-btn style3 th-icon">Send Message<img src="{{ asset('assets/img/icon/plane2.svg') }}"
                                         alt="Send Icon"></button>
                             </div>
                         </div>
@@ -152,14 +152,14 @@
                         </ul>
                     </div>--}}
 
-                    <div class="widget widget_tag_cloud " data-aos="fade-left" data-aos-delay="300">
+                    <div class="widget widget_tag_cloud " data-aos="fade-left">
                         <h3 class="widget_title">Contact Us</h3>
                         <div class="th-widget-contact">
                             <div class="info-box_text">
                                 <div class="icon"><img src="{{ asset('assets/img/icon/location-dot.svg') }}"
                                         alt="Location Icon"></div>
                                 <div class="details">
-                                    <p> 51A Wilkinson road, Freetown, Sierra Leone</p>
+                                    <p > 51A Wilkinson road, Freetown, Sierra Leone</p>
                                 </div>
                             </div>
                             <div class="info-box_text">

@@ -114,7 +114,7 @@
                             </div>
                         </div>
 
-                        <div class="th-comment-form" data-aos="fade-up" data-aos-delay="600">
+                        <div class="th-comment-form" data-aos="fade-up">
                             <div class="row">
                                 <h3 class="blog-inner-title h4 mb-2">Contact Us</h3>
                                 <p class="mb-25">Reach out to us from our contact form and we will get back to you shortly.
@@ -158,7 +158,7 @@
                                         I comment.</label>
                                 </div>
                                 <div class="col-12 form-group mb-0">
-                                    <button class="th-btn">Send Message<img
+                                    <button class="th-btn style3 th-icon">Send Message<img
                                             src="{{ asset('assets/img/icon/plane2.svg') }}" alt="Send Icon"></button>
                                 </div>
                             </div>
