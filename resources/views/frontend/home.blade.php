@@ -972,7 +972,7 @@
 
 <div class="brand-area overflow-hidden space">
     <div class="container-fluid th-container ">
-        <div class="title-area mb-20 text-center mb-3"><span class="sub-title">Our airline partners</span>
+        <div class="title-area mb-20 text-center"><span class="sub-title">Our airline partners</span>
             <h2 class="sec-title">Explore our network of trusted airline partners</h2>
         </div>
         <div class="swiper th-slider brandSlider1" id="brandSlider1"
