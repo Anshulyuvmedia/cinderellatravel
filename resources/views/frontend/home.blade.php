@@ -6,14 +6,14 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="hero-inner">
-                    <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_2_1.jpg"></div>
+                  <video autoplay loop muted class="h-100">
+                        <source src="assets/img/hero/hero-video.mp4" type="video/mp4" class="h-100">
+                    </video>
                     <div class="container">
                         <div class="hero-style2">
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Discover <span
                                     class="hero-text">Your Dream Journey</span></h1>
-                            <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Lamira Tour and Travel
-                                Agency offers seamless travel solutions with air ticketing, travel visas, insurance,
-                                hotel bookings, and curated holiday packages for unforgettable adventures.</p>
+                            <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Lamira Tour and Travel Agency offers complete travel solutions, from air tickets and visas to insurance, hotels, and holiday packages.</p>
                             <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="#"
                                     class="th-btn white-btn th-icon">Explore Our Services</a></div>
                         </div>
@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hero-inner"><video autoplay loop muted>
-                        <source src="assets/img/hero/hero-video.mp4" type="video/mp4">
+                <div class="hero-inner"><video autoplay loop muted class="h-100">
+                        <source src="assets/img/hero/hero-video3.mp4" type="video/mp4" class="h-100">
                     </video>
                     <div class="container">
                         <div class="hero-style2">
@@ -39,7 +39,9 @@
             </div>
             <div class="swiper-slide">
                 <div class="hero-inner">
-                    <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_2_3.jpg"></div>
+                  <video autoplay loop muted class="h-100">
+                        <source src="assets/img/hero/hero-video3.mp4" type="video/mp4" class="h-100">
+                    </video>
                     <div class="container">
                         <div class="hero-style2">
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Embark on <span
@@ -54,16 +56,14 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="hero-inner"><video autoplay loop muted>
-                        <source src="assets/img/hero/hero-video.mp4" type="video/mp4">
+                <div class="hero-inner"><video autoplay loop muted class="h-100">
+                        <source src="assets/img/hero/placeonevid.mp4" type="video/mp4" class="h-100">
                     </video>
                     <div class="container">
                         <div class="hero-style2">
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Explore <span
                                     class="hero-text">The World Your Way</span></h1>
-                            <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Cinderella’s all-in-one
-                                travel solutions include air ticketing, visa services, insurance, hotel bookings, and
-                                tailored holiday packages for a hassle-free journey.</p>
+                            <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Lamira’s all-in-one travel services include ticketing, visas, insurance, hotels, and custom holiday packages.</p>
                             <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="#"
                                     class="th-btn white-btn th-icon">Book Your Adventure</a></div>
                         </div>

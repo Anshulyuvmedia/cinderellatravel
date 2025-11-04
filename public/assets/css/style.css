@@ -11933,6 +11933,9 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child>.th-post-
     font-size: 18px;
     color: var(--white-color);
     margin-bottom: 38px;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .hero-style2 .th-btn {
