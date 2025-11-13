@@ -74,6 +74,121 @@
 </head>
 
 <body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="travelBookingModal" tabindex="-1" aria-labelledby="travelModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="travelModalLabel">Travel Booking Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <form id="travelBookingForm" novalidate>
+                    @csrf
+                    <div class="modal-body">
+                        <!-- Error Alert -->
+                        <div class="alert alert-danger d-none" id="errorAlert">
+                            <ul id="errorList" class="mb-0"></ul>
+                        </div>
+
+                        <div class="row">
+                            <!-- Full Name -->
+                            <div class="col-md-6 mb-3">
+                                <label for="full_name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="full_name" name="full_name" required>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                                <small class="form-text text-muted">Required for sending quotes</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Phone Number -->
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number (optional)</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}">
+                                <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                                <small class="form-text text-muted">For follow-up calls</small>
+                            </div>
+
+                            <!-- Preferred Destination -->
+                            <div class="col-md-6 mb-3">
+                                <label for="destination" class="form-label">Preferred Destination <span class="text-danger">*</span></label>
+                                <select class="form-select" id="destination" name="destination" required>
+                                    <option value="" selected disabled>Select destination</option>
+                                    <option value="Bali">Bali</option>
+                                    <option value="Paris">Paris</option>
+                                    <option value="Maldives">Maldives</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a destination.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Travel Dates -->
+                            <div class="col-md-6 mb-3">
+                                <label for="travel_from" class="form-label">Travel From <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="travel_from" name="travel_from" required>
+                                <div class="invalid-feedback">Please select start date.</div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="travel_to" class="form-label">Travel To <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="travel_to" name="travel_to" required>
+                                <div class="invalid-feedback">Please select end date.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Number of Travelers -->
+                            <div class="col-md-6 mb-3">
+                                <label for="travelers" class="form-label">Number of Travelers <span class="text-danger">*</span></label>
+                                <select class="form-select" id="travelers" name="travelers" required>
+                                    <option value="" selected disabled>Select number</option>
+                                    <option value="1">1 (Solo)</option>
+                                    <option value="2">2 (Couple)</option>
+                                    <option value="Family">Family</option>
+                                    <option value="Group">Group</option>
+                                </select>
+                                <div class="invalid-feedback">Please select number of travelers.</div>
+                            </div>
+
+                            <!-- Travel Type -->
+                            <div class="col-md-6 mb-3">
+                                <label for="travel_type" class="form-label">Travel Type <span class="text-danger">*</span></label>
+                                <select class="form-select" id="travel_type" name="travel_type" required>
+                                    <option value="" selected disabled>Select type</option>
+                                    <option value="Honeymoon">Honeymoon</option>
+                                    <option value="Adventure">Adventure</option>
+                                    <option value="Family">Family</option>
+                                    <option value="Luxury">Luxury</option>
+                                    <option value="Budget">Budget</option>
+                                </select>
+                                <div class="invalid-feedback">Please select travel type.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal end -->
+
     <div class="cursor-follower"></div>
     <div class="slider-drag-cursor"><i class="fas fa-angle-left me-2"></i> DRAG <i class="fas fa-angle-right ms-2"></i>
     </div>
@@ -86,7 +201,7 @@
         <div id="loader" class="th-preloader">
             <div class="animation-preloader position-relative">
                 <img src="{{ asset('assets/img/air-travel.png') }}" alt="" class="fly-animation position-absolute">
-                <div class="txt-loading">
+                <div class="txt-loading" style="font-family: 'bookmania', sens-serif">
                     <span preloader-text="L" class="characters">L</span>
                     <span preloader-text="A" class="characters">A</span>
                     <span preloader-text="M" class="characters">M</span>
@@ -168,7 +283,8 @@
                     <div class="info-box_text">
                         <div class="icon"><img src="{{ asset('assets/img/icon/location-dot.svg') }}" alt="img"></div>
                         <div class="details">
-                            <p>C-80,81 , B.K. Kaul Nagar Ajmer, Rajasthan</p>
+                            <p>51A Wilkinson road,
+                                Freetown, Sierra Leone</p>
                         </div>
                     </div>
                 </div>
@@ -225,7 +341,8 @@
                                     <span>salesfna@lamairatravel.com</span>
                                 </li>
                                 <li class="d-none d-xl-inline-block"><i class="fa-sharp fa-regular fa-location-dot"></i>
-                                    <span>C-80,81 , B.K. Kaul Nagar Ajmer, Rajasthan</span>
+                                    <span>51A Wilkinson road,
+                                        Freetown, Sierra Leone</span>
                                 </li>
                                 <li class="d-none d-xl-inline-block">
                                     <i class="fa-regular fa-clock"></i>
@@ -301,7 +418,7 @@
                             </nav><button type="button" class="th-menu-toggle d-block d-xl-none"><i class="far fa-bars"></i></button>
                         </div>
                         <div class="col-auto d-none d-xl-block">
-                            <div class="header-button"><a href="{{ route('contactus') }}" class="th-btn style3 th-icon">Book
+                            <div class="header-button"><a data-bs-toggle="modal" data-bs-target="#travelBookingModal" class="th-btn style3 th-icon">Book
                                     Now</a>
                             </div>
                         </div>
@@ -318,7 +435,7 @@
 
 
     <footer class="footer-wrapper footer-layout1" data-bg-src="{{ asset('assets/img/bg/map.png') }}">
-        <div class="widget-area" >
+        <div class="widget-area">
             <div class="container">
 
                 <div class="row justify-content-between">
@@ -376,7 +493,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright-wrap bg-transparent" >
+        <div class="copyright-wrap bg-transparent">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-md-12">
@@ -461,6 +578,71 @@
     <script src="https://unpkg.com/@studio-freight/lenis"></script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookingForm = document.getElementById('travelBookingForm');
+            const errorAlert = document.getElementById('errorAlert');
+            const errorList = document.getElementById('errorList');
+            const modal = new bootstrap.Modal(document.getElementById('travelBookingModal'));
+
+            // Date validation
+            const travelFrom = document.getElementById('travel_from');
+            const travelTo = document.getElementById('travel_to');
+
+            travelFrom.addEventListener('change', function() {
+                travelTo.min = this.value;
+            });
+
+            travelTo.addEventListener('change', function() {
+                if (this.value < travelFrom.value) {
+                    this.setCustomValidity('End date must be after start date');
+                    this.classList.add('is-invalid');
+                } else {
+                    this.setCustomValidity('');
+                    this.classList.remove('is-invalid');
+                }
+            });
+
+            bookingForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Clear errors
+                errorAlert.classList.add('d-none');
+                errorList.innerHTML = '';
+                document.querySelectorAll('.is-invalid').forEach(el => {
+                    el.classList.remove('is-invalid');
+                });
+
+                if (!bookingForm.checkValidity()) {
+                    bookingForm.classList.add('was-validated');
+                    return;
+                }
+
+                const formData = new FormData(bookingForm);
+
+                fetch('/travel-bookings', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value, // Changed this line
+                            'Accept': 'application/json',
+                        },
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            modal.hide();
+                            bookingForm.reset();
+                            bookingForm.classList.remove('was-validated');
+                            alert('Booking request submitted successfully!');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+
         // create Lenis instance
         const lenis = new Lenis({
             duration: 2, // smoothness (lower = faster scroll)

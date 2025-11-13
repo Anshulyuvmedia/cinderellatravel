@@ -12,477 +12,370 @@
         </div>
     </div>
 </div>
-
 <section class="testimonial-area2 overflow-hidden space" id="testi-sec">
     <div class="container">
         <div class="title-area text-center"><span class="sub-title">Our Branches</span>
             <h2 class="sec-title">Making a presence in every part of the world!</h2>
         </div>
         <style>
-            :root {
-                --color-teal-500: rgba(33, 128, 141, 1);
-                --color-teal-600: rgba(29, 116, 128, 1);
-                --color-cream-50: rgba(252, 252, 249, 1);
-                --color-cream-100: rgba(255, 255, 253, 1);
-                --color-slate-900: rgba(19, 52, 59, 1);
-                --color-slate-500: rgba(98, 108, 113, 1);
-                --color-brown-600-rgb: 94, 82, 64;
-                --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            svg {
+                display: block;
+                width: 100%;
+                height: auto;
+                background: #000;
             }
 
-           
+            .country {
+                cursor: pointer;
+                transition: opacity 0.3s;
+            }
 
-            #resortMap {
-                max-width: 100%;
-                width: 100%;
-                margin: 0 auto;
-                background: white;
-                padding: 20px;
-                border-radius: 12px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            .country:hover {
+                opacity: 0.8 !important;
+            }
+
+            .tooltip {
+                position: absolute;
+                text-align: center;
+                background: #ffffff;
+                margin: 0px;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                opacity: 0;
+                pointer-events: none;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                max-width: 200px;
+                z-index: 10;
+            }
+
+            .tooltip img {
+                vertical-align: middle;
+                margin-right: 8px;
+                border: 1px solid #ccc;
+                border-radius: 2px;
+            }
+
+            #map-container {
                 position: relative;
-                overflow: hidden;
-                touch-action: pan-y pinch-zoom;
+                width: 100%;
             }
 
             .zoom-controls {
                 position: absolute;
                 top: 20px;
                 right: 20px;
+                z-index: 5;
                 display: flex;
-                flex-direction: column;
                 gap: 8px;
-                z-index: 10;
             }
 
             .zoom-btn {
                 width: 40px;
                 height: 40px;
-                background: white;
-                border: 2px solid var(--color-teal-500);
-                border-radius: 8px;
-                color: var(--color-teal-500);
-                font-size: 20px;
-                font-weight: bold;
+                padding: 0;
+                border: 1px solid #ddd;
+                background: #fff;
+                border-radius: 4px;
                 cursor: pointer;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: all 0.2s ease;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                transition: all 0.2s;
             }
 
             .zoom-btn:hover {
-                background: var(--color-teal-500);
-                color: white;
+                background: #f0f0f0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             }
 
             .zoom-btn:active {
                 transform: scale(0.95);
             }
 
-            #resortMap svg {
-                width: 100%;
-                height: auto;
-                display: block;
-                cursor: grab;
-                touch-action: none;
-            }
-
-            #resortMap svg.grabbing {
-                cursor: grabbing;
-            }
-
-            /* Geo indicator pin styles */
-            #Resorts .geo-ind {
-                fill: var(--color-teal-500);
-            }
-
-            /* Resort location link styles */
-            #Resorts a {
+            .reset-btn {
+                width: 40px;
+                height: 40px;
+                padding: 0;
+                border: 1px solid #ddd;
+                background: #fff;
+                border-radius: 4px;
                 cursor: pointer;
-                outline: none;
+                font-size: 12px;
+                font-weight: bold;
+                color: #333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s ease;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
-            /* Hover background box */
-            #Resorts a rect {
-                fill: var(--color-cream-100);
-                stroke: rgba(var(--color-brown-600-rgb), 0.2);
-                stroke-width: 1;
-                rx: 10;
-                opacity: 0;
-                filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0));
-            }
-
-            #Resorts a:hover rect {
-                opacity: 1;
-                fill: white;
-                stroke: var(--color-teal-500);
-                stroke-width: 2;
-                filter: drop-shadow(0 4px 12px rgba(33, 128, 141, 0.2));
-            }
-
-            /* Pin hover effect */
-            #Resorts a:hover .geo-ind {
-                fill: var(--color-teal-600);
-                filter: drop-shadow(0 2px 4px rgba(33, 128, 141, 0.4));
-            }
-
-            /* Text styles - hidden by default */
-            #Resorts a text {
-                visibility: hidden;
-                opacity: 0;
-                font-family: var(--font-family-base);
-                pointer-events: none;
-            }
-
-            #Resorts a:hover text {
-                visibility: visible;
-                opacity: 1;
-            }
-
-            /* Title text */
-            #Resorts a .title {
-                fill: var(--color-slate-900);
-                font-size: 18px;
-                font-weight: 600;
-                letter-spacing: -0.01em;
-            }
-
-            /* Highlighted locations */
-            #Resorts a .title tspan {
-                fill: var(--color-slate-900);
-            }
-
-            /* Subtitle/phone text */
-            #Resorts a .subtitle {
-                fill: var(--color-slate-500);
-                font-size: 14px;
-                font-weight: 400;
-            }
-
-            /* Special highlight for featured locations */
-            #Resorts a:hover .title tspan[style*="background-color"] {
-                fill: var(--color-teal-600);
-            }
-
-            /* Focus styles for accessibility */
-            #Resorts a:focus-visible rect {
-                opacity: 1;
-                stroke: var(--color-teal-600);
-                stroke-width: 3;
-                outline: 2px solid var(--color-teal-500);
-                outline-offset: 2px;
-            }
-
-            #Resorts a:focus-visible .geo-ind {
-                fill: var(--color-teal-600);
-            }
-
-            /* Map background image */
-            #theworld image {
-                opacity: 0.95;
-            }
-
-            .country-flag {
-                pointer-events: none;
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                #resortMap {
-                    padding: 10px;
-                }
-
-                .zoom-controls {
-                    top: 10px;
-                    right: 10px;
-                    gap: 6px;
-                }
-
-                .zoom-btn {
-                    width: 36px;
-                    height: 36px;
-                    font-size: 18px;
-                }
-
-                #Resorts a .title {
-                    font-size: 14px;
-                }
-
-                #Resorts a .subtitle {
-                    font-size: 11px;
-                }
+            .reset-btn:hover {
+                background: #f0f0f0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             }
         </style>
 
-        <div id="resortMap">
-            <div class="zoom-controls">
-                <button class="zoom-btn" id="zoomIn" aria-label="Zoom in">+</button>
-                <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">−</button>
-                <button class="zoom-btn" id="zoomReset" aria-label="Reset zoom" style="font-size: 16px;">⟲</button>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2014.2 986.8" id="worldMap">
-                <g id="theworld">
-                    <image overflow="visible" width="1476" height="723" xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/11614/mapbg.png" transform="matrix(1.3647 0 0 1.3647 -4.336293e-02 8.851531e-02)"></image>
-                </g>
+        <!-- Load D3 FIRST -->
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
 
-                <g id="Resorts">
-                    <!-- Freetown, Sierra Leone -->
-                    <a tabindex="0" role="button" aria-label="Freetown, Sierra Leone - Click for details">
-                        <rect x="850" y="380" width="310" height="55"></rect>
-                        <image x="854" y="386" width="30" height="30" xlink:href="https://flagcdn.com/w40/sl.png" class="country-flag"></image>
-                        <text class="title" x="880" y="405">
-                            <tspan>Freetown, Sierra Leone</tspan>
-                        </text>
-                        <text class="subtitle" x="880" y="423">+23278676849</text>
-                    </a>
-
-                    <!-- Monrovia, Liberia -->
-                    <a tabindex="0" role="button" aria-label="Monrovia, Liberia - Click for details">
-                        <rect x="820" y="410" width="290" height="55"></rect>
-                        <image x="824" y="416" width="30" height="30" xlink:href="https://flagcdn.com/w40/lr.png" class="country-flag"></image>
-                        <text class="title" x="860" y="435">Monrovia, Liberia</text>
-                        <text class="subtitle" x="860" y="453">+231 77 508 1433</text>
-                    </a>
-
-                    <!-- Lagos, Nigeria -->
-                    <a tabindex="0" role="button" aria-label="Lagos, Nigeria - Click for details">
-                        <rect x="1020" y="420" width="270" height="55"></rect>
-                        <image x="1024" y="426" width="30" height="30" xlink:href="https://flagcdn.com/w40/ng.png" class="country-flag"></image>
-                        <text class="title" x="1060" y="445">Lagos, Nigeria</text>
-                        <text class="subtitle" x="1060" y="463">+234 904 623 4551</text>
-                    </a>
-
-                    <!-- Ouagadougou, Burkina Faso -->
-                    <a tabindex="0" role="button" aria-label="Ouagadougou, Burkina Faso - Click for details">
-                        <rect x="960" y="300" width="320" height="55"></rect>
-                        <image x="964" y="306" width="30" height="30" xlink:href="https://flagcdn.com/w40/bf.png" class="country-flag"></image>
-                        <text class="title" x="1000" y="325">Ouagadougou, Burkina Faso</text>
-                        <text class="subtitle" x="1000" y="343">+226 05054651</text>
-                    </a>
-
-                    <!-- Abuja, Nigeria -->
-                    <a tabindex="0" role="button" aria-label="Abuja, Nigeria - Click for details">
-                        <rect x="1070" y="365" width="260" height="55"></rect>
-                        <image x="1074" y="371" width="30" height="30" xlink:href="https://flagcdn.com/w40/ng.png" class="country-flag"></image>
-                        <text class="title" x="1110" y="390">Abuja, Nigeria</text>
-                        <text class="subtitle" x="1110" y="408">+234 816 958 1101</text>
-                    </a>
-
-                    <!-- Port Harcourt, Nigeria -->
-                    <a tabindex="0" role="button" aria-label="Port Harcourt, Nigeria - Click for details">
-                        <rect x="1075" y="455" width="300" height="55"></rect>
-                        <image x="1079" y="461" width="30" height="30" xlink:href="https://flagcdn.com/w40/ng.png" class="country-flag"></image>
-                        <text class="title" x="1115" y="480">Port Harcourt, Nigeria</text>
-                        <text class="subtitle" x="1115" y="498">+234 810 994 0319</text>
-                    </a>
-
-                    <!-- Bamako, Mali -->
-                    <a tabindex="0" role="button" aria-label="Bamako, Mali - Click for details">
-                        <rect x="880" y="310" width="250" height="55"></rect>
-                        <image x="884" y="316" width="30" height="30" xlink:href="https://flagcdn.com/w40/ml.png" class="country-flag"></image>
-                        <text class="title" x="909" y="335">Bamako, Mali</text>
-                        <text class="subtitle" x="909" y="353">+232 8021 2175</text>
-                    </a>
-
-                    <!-- Bobo-Dioulasso, Burkina Faso -->
-                    <a tabindex="0" role="button" aria-label="Bobo-Dioulasso, Burkina Faso - Click for details">
-                        <rect x="930" y="350" width="340" height="55"></rect>
-                        <image x="934" y="356" width="30" height="30" xlink:href="https://flagcdn.com/w40/bf.png" class="country-flag"></image>
-                        <text class="title" x="970" y="375">Bobo-Dioulasso, Burkina Faso</text>
-                        <text class="subtitle" x="970" y="393">+226 0505 4651</text>
-                    </a>
-
-                    <!-- Dakar, Senegal -->
-                    <a tabindex="0" role="button" aria-label="Dakar, Senegal - Click for details">
-                        <rect x="750" y="280" width="260" height="55"></rect>
-                        <image x="754" y="286" width="30" height="30" xlink:href="https://flagcdn.com/w40/sn.png" class="country-flag"></image>
-                        <text class="title" x="790" y="305">Dakar, Senegal</text>
-                        <text class="subtitle" x="790" y="323">+232 8021 2178</text>
-                    </a>
-
-                    <!-- Accra, Ghana -->
-                    <a tabindex="0" role="button" aria-label="Accra, Ghana - Click for details">
-                        <rect x="990" y="425" width="240" height="55"></rect>
-                        <image x="994" y="431" width="30" height="30" xlink:href="https://flagcdn.com/w40/gh.png" class="country-flag"></image>
-                        <text class="title" x="1030" y="450">Accra, Ghana</text>
-                        <text class="subtitle" x="1030" y="468">+233 53 110 0930</text>
-                    </a>
-
-                    <!-- Banjul, Gambia -->
-                    <a tabindex="0" role="button" aria-label="Banjul, Gambia - Click for details">
-                        <rect x="770" y="335" width="260" height="55"></rect>
-                        <image x="774" y="341" width="30" height="30" xlink:href="https://flagcdn.com/w40/gm.png" class="country-flag"></image>
-                        <text class="title" x="810" y="360">Banjul, Gambia</text>
-                        <text class="subtitle" x="810" y="378">+232 8021 2177</text>
-                    </a>
-
-                    <!-- Ajmer, India -->
-                    <a tabindex="0" role="button" aria-label="Ajmer, India - Click for details">
-                        <rect x="1390" y="280" width="240" height="55"></rect>
-                        <image x="1394" y="286" width="30" height="30" xlink:href="https://flagcdn.com/w40/in.png" class="country-flag"></image>
-                        <text class="title" x="1430" y="305">
-                            <tspan>Ajmer, India</tspan>
-                        </text>
-                        <text class="subtitle" x="1430" y="323">+91 784 990 9355</text>
-                    </a>
-                </g>
-            </svg>
+        <div id="map-container">
+     
+            <svg class="chart"></svg>
         </div>
 
         <script>
-            const svg = document.getElementById('worldMap');
-            const container = document.getElementById('resortMap');
-            const zoomInBtn = document.getElementById('zoomIn');
-            const zoomOutBtn = document.getElementById('zoomOut');
-            const zoomResetBtn = document.getElementById('zoomReset');
+            var dataurl = "https://gist.githubusercontent.com/d3noob/5189284/raw/598d1ebe0c251cd506c8395c60ab1d08520922a7/world-110m2.json";
 
-            let scale = 1;
-            let translateX = 0;
-            let translateY = 0;
-            let isDragging = false;
-            let startX, startY;
+            var width = 1200,
+                height = 600;
 
-            const minScale = 1;
-            const maxScale = 4;
-            const zoomStep = 0.3;
+            var highlightedCountries = [
+                "India", "Nigeria", "Ghana", "Guinea", "Sierra Leone",
+                "Liberia", "Burkina Faso", "Mali", "Senegal", "Gambia"
+            ];
 
-            function updateTransform() {
-                svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+            var countryIdMap = {
+                356: {
+                    name: "India",
+                    iso: "IN",
+                    city: "Ajmer",
+                    phone: "+91 784 990 9355"
+                },
+                566: {
+                    name: "Nigeria",
+                    iso: "NG",
+                    city: "Lagos",
+                    phone: "+234 904 623 4551"
+                },
+                288: {
+                    name: "Ghana",
+                    iso: "GH",
+                    city: "Accra",
+                    phone: "+233 53 110 0930"
+                },
+                324: {
+                    name: "Guinea",
+                    iso: "GN",
+                    city: "Conakry",
+                    phone: ""
+                },
+                694: {
+                    name: "Sierra Leone",
+                    iso: "SL",
+                    city: "Freetown",
+                    phone: "+23278676849"
+                },
+                430: {
+                    name: "Liberia",
+                    iso: "LR",
+                    city: "Monrovia",
+                    phone: "+231 77 508 1433"
+                },
+                854: {
+                    name: "Burkina Faso",
+                    iso: "BF",
+                    city: "Ouagadougou",
+                    phone: "+226 05054651"
+                },
+                466: {
+                    name: "Mali",
+                    iso: "ML",
+                    city: "Bamako",
+                    phone: "+232 8021 2175"
+                },
+                686: {
+                    name: "Senegal",
+                    iso: "SN",
+                    city: "Dakar",
+                    phone: "+232 8021 2178"
+                },
+                270: {
+                    name: "Gambia",
+                    iso: "GM",
+                    city: "Banjul",
+                    phone: "+232 8021 2177"
+                }
+            };
+
+            var projection = d3.geo.mercator()
+                .scale(180)
+                .translate([width / 2, height / 1.5]);
+
+            var svg = d3.select(".chart")
+                .attr("viewBox", "0 0 " + width + " " + height)
+                .attr("preserveAspectRatio", "xMidYMid meet");
+
+            // Create main group for zoomable content
+            var g = svg.append("g");
+
+            // Ocean background
+            g.append("rect")
+                .style("fill", "#f5f5f5")
+                .attr("width", width)
+                .attr("height", height);
+
+            var path = d3.geo.path()
+                .projection(projection);
+
+            var tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip");
+
+            // Store current zoom state
+            var currentScale = 1;
+            var currentTranslate = [0, 0];
+
+            // Function to get flag URL
+            function getFlagUrl(isoCode) {
+                return "https://flagcdn.com/32x24/" + isoCode.toLowerCase() + ".png";
             }
 
-            // Zoom in
-            zoomInBtn.addEventListener('click', () => {
-                if (scale < maxScale) {
-                    scale = Math.min(scale + zoomStep, maxScale);
-                    updateTransform();
+            // Load and display the World
+            d3.json(dataurl, function(error, topology) {
+                if (error) throw error;
+
+                g.selectAll(".country")
+                    .data(topojson.feature(topology, topology.objects.countries).features)
+                    .enter().append("path")
+                    .attr("class", function(d) {
+                        return "country c" + d.id;
+                    })
+                    .attr("d", path)
+                    .style("fill", "#474B54")
+                    .style("stroke", "#ffffff")
+                    .style("stroke-width", "1px")
+                    .on("mouseover", function(d) {
+                        var countryData = countryIdMap[d.id];
+                        if (countryData) {
+                            var countryName = countryData.name;
+                            var isoCode = countryData.iso;
+                            var flagUrl = getFlagUrl(isoCode);
+                            var city = countryData.city || "N/A";
+                            var phone = countryData.phone || "N/A";
+
+                            d3.select(this).style("opacity", 0.8);
+                            tooltip.style("left", (d3.event.pageX + 15) + "px")
+                                .style("top", (d3.event.pageY - 30) + "px")
+                                .style("opacity", 1)
+                                .html("<img src='" + flagUrl + "' width='32' height='24' /><br/><strong>" + countryName + "</strong><br/><small>" + city + "</small><br/><small style='color: #666;'>" + phone + "</small>");
+                        }
+                    })
+                    .on("mouseout", function() {
+                        d3.select(this).style("opacity", 1);
+                        tooltip.style("opacity", 0);
+                    });
+
+                // Add flag images
+                var flags = g.selectAll(".flag-image")
+                    .data(topojson.feature(topology, topology.objects.countries).features.filter(function(d) {
+                        var countryData = countryIdMap[d.id];
+                        return countryData && highlightedCountries.indexOf(countryData.name) !== -1;
+                    }))
+                    .enter()
+                    .append("image")
+                    .attr("class", "flag-image")
+                    .attr("xlink:href", function(d) {
+                        var countryData = countryIdMap[d.id];
+                        return getFlagUrl(countryData.iso);
+                    })
+                    .attr("width", 28)
+                    .attr("height", 21)
+                    .attr("x", function(d) {
+                        var centroid = path.centroid(d);
+                        return centroid[0] - 14;
+                    })
+                    .attr("y", function(d) {
+                        var centroid = path.centroid(d);
+                        return centroid[1] - 10.5;
+                    })
+                    .style("pointer-events", "none")
+                    .style("filter", "drop-shadow(0 1px 2px rgba(0,0,0,0.3))");
+
+                // Zoom behavior setup - AFTER data is loaded
+                var zoom = d3.behavior.zoom()
+                    .scaleExtent([1, 8])
+                    .on("zoom", function() {
+                        g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+
+                        // Update projection scale and translate
+                        projection.scale(180 * d3.event.scale)
+                            .translate([width / 2 * d3.event.scale + d3.event.translate[0],
+                                height / 1.5 * d3.event.scale + d3.event.translate[1]
+                            ]);
+
+                        // Redraw paths
+                        g.selectAll(".country").attr("d", path);
+                        g.selectAll(".flag-image")
+                            .attr("x", function(d) {
+                                var centroid = path.centroid(d);
+                                return centroid[0] - 14;
+                            })
+                            .attr("y", function(d) {
+                                var centroid = path.centroid(d);
+                                return centroid[1] - 10.5;
+                            });
+                    });
+
+                svg.call(zoom);
+
+                // Zoom in function
+                d3.select("#zoom-in").on("click", function() {
+                    var newScale = currentScale * 1.5;
+                    var newTranslate = [
+                        currentTranslate[0] - (width / 2) * (1.5 - 1),
+                        currentTranslate[1] - (height / 2) * (1.5 - 1)
+                    ];
+                    updateZoom(newScale, newTranslate);
+                });
+
+                // Zoom out function
+                d3.select("#zoom-out").on("click", function() {
+                    var newScale = Math.max(1, currentScale / 1.5);
+                    var newTranslate = [
+                        currentTranslate[0] + (width / 2) * (1 - 1 / 1.5),
+                        currentTranslate[1] + (height / 2) * (1 - 1 / 1.5)
+                    ];
+                    updateZoom(newScale, newTranslate);
+                });
+
+                // Reset zoom function
+                d3.select("#reset-zoom").on("click", function() {
+                    updateZoom(1, [0, 0]);
+                });
+
+                // Update zoom with animation
+                function updateZoom(newScale, newTranslate) {
+                    currentScale = newScale;
+                    currentTranslate = newTranslate;
+
+                    zoom.scale(newScale).translate(newTranslate);
+
+                    svg.transition().duration(500).call(zoom.event);
                 }
-            });
 
-            // Zoom out
-            zoomOutBtn.addEventListener('click', () => {
-                if (scale > minScale) {
-                    scale = Math.max(scale - zoomStep, minScale);
-                    if (scale === minScale) {
-                        translateX = 0;
-                        translateY = 0;
-                    }
-                    updateTransform();
+                // Responsive resize function
+                function resize() {
+                    var container = d3.select("#map-container").node();
+                    var containerWidth = container.getBoundingClientRect().width;
+                    var scale = containerWidth / width;
+
+                    flags.attr("width", 28 * scale)
+                        .attr("height", 21 * scale);
                 }
-            });
 
-            // Reset zoom
-            zoomResetBtn.addEventListener('click', () => {
-                scale = 1;
-                translateX = 0;
-                translateY = 0;
-                updateTransform();
-            });
-
-            // Mouse wheel zoom
-            container.addEventListener('wheel', (e) => {
-                e.preventDefault();
-                const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
-                const newScale = Math.max(minScale, Math.min(maxScale, scale + delta));
-
-                if (newScale !== scale) {
-                    scale = newScale;
-                    if (scale === minScale) {
-                        translateX = 0;
-                        translateY = 0;
-                    }
-                    updateTransform();
-                }
-            }, {
-                passive: false
-            });
-
-            // Pan functionality - Desktop
-            svg.addEventListener('mousedown', (e) => {
-                if (scale > 1) {
-                    isDragging = true;
-                    svg.classList.add('grabbing');
-                    startX = e.clientX - translateX;
-                    startY = e.clientY - translateY;
-                }
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                if (isDragging) {
-                    translateX = e.clientX - startX;
-                    translateY = e.clientY - startY;
-                    updateTransform();
-                }
-            });
-
-            document.addEventListener('mouseup', () => {
-                isDragging = false;
-                svg.classList.remove('grabbing');
-            });
-
-            // Touch support for mobile - FIXED
-            let initialDistance = 0;
-            let initialScale = 1;
-            let touchStartX = 0;
-            let touchStartY = 0;
-            let isTouchDragging = false;
-
-            svg.addEventListener('touchstart', (e) => {
-                if (e.touches.length === 2) {
-                    // Two-finger pinch zoom
-                    e.preventDefault();
-                    initialDistance = Math.hypot(
-                        e.touches[0].clientX - e.touches[1].clientX,
-                        e.touches[0].clientY - e.touches[1].clientY
-                    );
-                    initialScale = scale;
-                } else if (e.touches.length === 1 && scale > 1) {
-                    // Single finger pan only when zoomed in
-                    e.preventDefault();
-                    isTouchDragging = true;
-                    touchStartX = e.touches[0].clientX - translateX;
-                    touchStartY = e.touches[0].clientY - translateY;
-                }
-            }, {
-                passive: false
-            });
-
-            svg.addEventListener('touchmove', (e) => {
-                if (e.touches.length === 2) {
-                    // Two-finger pinch zoom
-                    e.preventDefault();
-                    const currentDistance = Math.hypot(
-                        e.touches[0].clientX - e.touches[1].clientX,
-                        e.touches[0].clientY - e.touches[1].clientY
-                    );
-                    scale = Math.max(minScale, Math.min(maxScale, initialScale * (currentDistance / initialDistance)));
-                    if (scale === minScale) {
-                        translateX = 0;
-                        translateY = 0;
-                    }
-                    updateTransform();
-                } else if (e.touches.length === 1 && isTouchDragging && scale > 1) {
-                    // Single finger pan only when zoomed in
-                    e.preventDefault();
-                    translateX = e.touches[0].clientX - touchStartX;
-                    translateY = e.touches[0].clientY - touchStartY;
-                    updateTransform();
-                }
-            }, {
-                passive: false
-            });
-
-            svg.addEventListener('touchend', (e) => {
-                isTouchDragging = false;
-                initialDistance = 0;
-                if (e.touches.length === 0 && scale === minScale) {
-                    translateX = 0;
-                    translateY = 0;
-                    updateTransform();
-                }
+                d3.select(window).on("resize", resize);
+                resize();
             });
         </script>
+
 
         {{-- <div class="row" >
                 <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="300" >
@@ -705,7 +598,7 @@
                     width="600" height="650" style="border-radius:20px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="col-lg-6 mt-5">
+            <div class="col-lg-6 ">
                 <div data-aos="fade-right" data-aos-delay="700">
                     <form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST"
                         class="contact-form style2 ajax-contact">

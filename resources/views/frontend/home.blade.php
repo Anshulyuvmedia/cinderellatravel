@@ -6,7 +6,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="hero-inner">
-                  <video autoplay loop muted class="h-100">
+                    <video autoplay loop muted class="h-100">
                         <source src="assets/img/hero/hero-video.mp4" type="video/mp4" class="h-100">
                     </video>
                     <div class="container">
@@ -39,7 +39,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="hero-inner">
-                  <video autoplay loop muted class="h-100">
+                    <video autoplay loop muted class="h-100">
                         <source src="assets/img/hero/hero-video3.mp4" type="video/mp4" class="h-100">
                     </video>
                     <div class="container">
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="th-swiper-custom">
+        <div class="th-swiper-custom d-none">
             <div class="swiper-pagination"></div>
             <div class="hero-icon"><button data-slider-prev="#heroSlide2, #heroSlide3"
                     class="hero-arrow slider-prev"><img src="assets/img/icon/hero-arrow-left.svg"
@@ -81,7 +81,7 @@
             </div>
         </div>
     </div>
-    <div class="swiper heroThumbs style2" id="heroSlide3">
+    <div class="swiper heroThumbs d-none style2" id="heroSlide3">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="hero-inner">
@@ -139,8 +139,8 @@
             </div>
         </div>
     </div>
-    <div class="scroll-down"><a href="#destination-sec" class="scroll-wrap"><span><img
-                    src="assets/img/icon/down-arrow.svg" alt=""></span>Scroll Down</a></div>
+    <!-- <div class="scroll-down"><a href="#destination-sec" class="scroll-wrap"><span><img
+                    src="assets/img/icon/down-arrow.svg" alt=""></span>Scroll Down</a></div> -->
 </div>
 
 <section class="category-area bg-top-center" data-bg-src="assets/img/bg/category_bg_1.png">
@@ -311,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                  <div class="swiper-slide">
+                <div class="swiper-slide">
                     <div class="destination-box gsap-cursor">
                         <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
                                 alt="destination image">
@@ -386,7 +386,7 @@
                         </div>
                     </div>
                 </div>
-                  <div class="swiper-slide">
+                <div class="swiper-slide">
                     <div class="destination-box gsap-cursor">
                         <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
                                 alt="destination image">
@@ -461,7 +461,7 @@
                         </div>
                     </div>
                 </div>
-                  <div class="swiper-slide">
+                <div class="swiper-slide">
                     <div class="destination-box gsap-cursor">
                         <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
                                 alt="destination image">
@@ -536,7 +536,7 @@
                         </div>
                     </div>
                 </div>
-                  <div class="swiper-slide">
+                <div class="swiper-slide">
                     <div class="destination-box gsap-cursor">
                         <div class="destination-img"><img src="assets/img/destination/destination_1_1.jpg"
                                 alt="destination image">
@@ -691,61 +691,7 @@
     </div>
 </div>
 
-{{-- <div class="about-area position-relative overflow-hidden space" id="about-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="img-box1">
-                        <div class="img1"><img src="assets/img/normal/about_1_1.jpg" alt="About"></div>
-                        <div class="img2"><img src="assets/img/normal/about_1_2.jpg" alt="About"></div>
-                        <div class="img3"><img src="assets/img/normal/about_1_3.jpg" alt="About"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="ps-xl-4 ms-xl-2">
-                        <div class="title-area mb-20 pe-xl-5 me-xl-5"><span class="sub-title style1">Travel With
-                                Confidence</span>
-                            <h2 class="sec-title mb-20 pe-xl-5 me-xl-5 heading">Plan Your Journey With Cinderella</h2>
-                            <p class="sec-text mb-30">Lamira Tour and Travel Agency has been crafting dream vacations
-                                for 25 years, offering expert air ticketing, visa services, travel insurance, hotel
-                                bookings, and bespoke holiday packages tailored to your desires.</p>
-                        </div>
-                        <div class="about-item-wrap">
-                            <div class="about-item ">
-                                <div class="about-item_img background-gradient"><img src="assets/img/icon/map3.svg" alt=""></div>
-                                <div class="about-item_centent">
-                                    <h5 class="box-title">Tailored Holiday Packages</h5>
-                                    <p class="about-item_text">Enjoy personalized travel itineraries designed to match your
-                                        preferences and budget.</p>
-                                </div>
-                            </div>
-                            <div class="about-item">
-                                <div class="about-item_img background-gradient"><img src="assets/img/icon/guide.svg" alt=""></div>
-                                <div class="about-item_centent">
-                                    <h5 class="box-title">Hassle-Free Travel Solutions</h5>
-                                    <p class="about-item_text">From flights to visas and insurance, we handle every detail
-                                        for a seamless travel experience.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-35"><a href="#" class="th-btn style3 th-icon background-gradient">Learn More</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="shape-mockup shape1 d-none d-xl-block" data-top="12%" data-left="-16%"><img
-                    src="assets/img/shape/shape_1.png" alt="shape"></div>
-            <div class="shape-mockup shape2 d-none d-xl-block" data-top="20%" data-left="-16%"><img
-                    src="assets/img/shape/shape_2.png" alt="shape"></div>
-            <div class="shape-mockup shape3 d-none d-xl-block" data-top="14%" data-left="-10%"><img
-                    src="assets/img/shape/shape_3.png" alt="shape"></div>
-            <div class="shape-mockup about-shape movingX d-none d-xxl-block" data-bottom="0%" data-right="-11%"><img
-                    src="assets/img/normal/about-slide-img.png" alt="shape"></div>
-            <div class="shape-mockup about-rating d-none d-xxl-block" data-bottom="50%" data-right="-20%"><i
-                    class="fa-sharp fa-solid fa-star"></i><span>4.9k</span></div>
-            <div class="shape-mockup about-emoji d-none d-xxl-block" data-bottom="25%" data-right="5%"><img
-                    src="assets/img/icon/emoji.png" alt=""></div>
-        </div>
-    </div> --}}
+
 
 <div class="gallery-area mt-5">
     <div class="container th-container">
@@ -977,131 +923,101 @@
         </div>
         <div class="swiper th-slider brandSlider1" id="brandSlider1"
             data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"6"},"1400":{"slidesPerView":"8"}}}'>
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper d-flex align-items-center">
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Aegean-Airlines-300x189.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Aegean-Airlines-300x189.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Aegean-Airlines-300x189.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Air-france-300x169.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Air-france-300x169.png" alt="Brand Logo"></a>
+                                src="assets/img/airlines/Air-france-300x169.png" alt="Brand Logo"> </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Air-india-300x180.png" alt="Brand Logo"> <img class="gray"
-                                src="assets/img/airlines/Air-india-300x180.png" alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Air-india-300x180.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Air-peace-airlines.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Air-peace-airlines.png" alt="Brand Logo"></a>
+                                src="assets/img/airlines/Air-peace-airlines.png" alt="Brand Logo"> </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Air-Senegal-300x86.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Air-Senegal-300x86.png" alt="Brand Logo"></a>
+                                src="assets/img/airlines/Air-Senegal-300x86.png" alt="Brand Logo"> </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Asky-300x125.png" alt="Brand Logo"> <img class="gray"
-                                src="assets/img/airlines/Asky-300x125.png" alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Asky-300x125.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/British-Airlines-300x169.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/British-Airlines-300x169.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/British-Airlines-300x169.png" alt="Brand Logo"></a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Brussels-airlines-300x71.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Brussels-airlines-300x71.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Brussels-airlines-300x71.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Egypt-air-300x164.png" alt="Brand Logo"> <img class="gray"
-                                src="assets/img/airlines/Egypt-air-300x164.png" alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Egypt-air-300x164.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Emirates-airlines-300x169.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Emirates-airlines-300x169.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Emirates-airlines-300x169.png" alt="Brand Logo"> </a></div>
                 </div>
             </div>
         </div>
         <div class="swiper th-slider brandSlider1" id="brandSlider1"
             data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"6"},"1400":{"slidesPerView":"8"}}}'>
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper d-flex align-items-center">
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Ethiopia.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Ethiopia.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Ethiopia.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Fly-Dubai-300x169.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Fly-Dubai-300x169.png" alt="Brand Logo"></a>
+                                src="assets/img/airlines/Fly-Dubai-300x169.png" alt="Brand Logo"> </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Kenya-300x200.png" alt="Brand Logo"> <img class="gray"
-                                src="assets/img/airlines/Kenya-300x200.png" alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Kenya-300x200.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Klm-royal-Dutch-airlines.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Klm-royal-Dutch-airlines.png" alt="Brand Logo"></a>
+                                src="assets/img/airlines/Klm-royal-Dutch-airlines.png" alt="Brand Logo"> </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Qatar-airlines-300x102.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Qatar-airlines-300x102.png" alt="Brand Logo"></a>
+                                src="assets/img/airlines/Qatar-airlines-300x102.png" alt="Brand Logo"> </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Royal-air-morroc.png" alt="Brand Logo"> <img class="gray"
-                                src="assets/img/airlines/Royal-air-morroc.png" alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Royal-air-morroc.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/South-Africa-Airlines-300x119.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/South-Africa-Airlines-300x119.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/South-Africa-Airlines-300x119.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Tap-Portugal-air-300x53.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Tap-Portugal-air-300x53.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Tap-Portugal-air-300x53.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Turkish-airlines-300x81.png" alt="Brand Logo"> <img class="gray"
-                                src="assets/img/airlines/Turkish-airlines-300x81.png" alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Turkish-airlines-300x81.png" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/United-airlines.svg" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/United-airlines.svg"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/United-airlines.svg" alt="Brand Logo"> </a></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="brand-box"><a href="#"><img class="original"
-                                src="assets/img/airlines/Virgin-Atlantic-300x188.png" alt="Brand Logo"> <img
-                                class="gray" src="assets/img/airlines/Virgin-Atlantic-300x188.png"
-                                alt="Brand Logo"></a></div>
+                                src="assets/img/airlines/Virgin-Atlantic-300x188.png" alt="Brand Logo"> </a></div>
                 </div>
             </div>
         </div>

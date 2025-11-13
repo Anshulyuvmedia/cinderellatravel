@@ -4,12 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\AdminStores;
 use App\Http\Controllers\AdminViews;
-
+use App\Mail\JobApplication;
 
 Route::get('/admin', function () {
     return view('auth.login');
-})
-;
+});
 
 Route::post('/logoutuser', function () {
     Auth::logout();
@@ -52,6 +51,23 @@ Route::controller(WebsiteController::class)->group(function () {
     Route::get('/services/travelinsurance', 'travelinsurance')->name('travelinsurance');
     Route::get('/services/hotelbooking', 'hotelbooking')->name('hotelbooking');
     Route::get('/services/holidaypackges', 'holidaypackges')->name('holidaypackges');
+
+    Route::post('/travel-bookings',  'store')->name('travel.bookings.store');
+    Route::post('/job-application',  'jobsubmit')->name('job.application.submit');
+    Route::get('/test-job-email', function () {
+        $jobData = [
+            'full_name' => 'John Doe',
+            'email' => 'applicant@example.com',
+            'phone' => '123-456-7890',
+            'service_type' => 'Sales & Marketing',
+            'message' => 'I am very interested in this position and believe my skills align perfectly with your requirements. I have 5 years of experience in sales and marketing with a proven track record of increasing revenue by 40% in my previous role.',
+            'resume_path' => storage_path('app/public/resumes/sample-resume.pdf'),
+            'resume_name' => 'John_Doe_Resume.pdf',
+        ];
+
+        // Return admin email preview
+        return new JobApplication($jobData);
+    });
 });
 
 //Admin Panel Routes
@@ -103,5 +119,4 @@ Route::controller(AdminStores::class)->group(function () {
     Route::post('/storeblog', 'storeblog')->name('admin.storeblog');
     Route::post('/updateblog', 'updateblog')->name('admin.updateblog');
     Route::get('/deleteblog/{id}', 'deleteblog')->name('deleteblog');
-
 });

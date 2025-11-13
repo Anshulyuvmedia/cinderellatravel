@@ -82,18 +82,10 @@
     <div class="choose-area2" data-bg-src="{{ asset('assets/img/bg/feature_bg_1.png') }}">
         <div class="container">
             <div class="row gy-4 justify-content-center justify-content-lg-between">
-                <div class="col-lg-4 col-md-6 choose-feature_wrapp" data-aos="fade-up" data-aos-delay="200">
-                    <div class="choose-feature">
-                        <div class="box-img"><img src="{{ asset('assets/img/normal/feature_1_1.jpg') }}" alt="Icon"></div>
-                        <div class="choose-feature_content">
-                            <h3 class="box-title">Our Value</h3>
-                            <p class="box-text">Our Value is to become our clients’ first choice. We strive to be the most professional and customer-focused travel consultants, using our knowledge, experience, and connections to fulfill all their holiday needs.</p>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="col-lg-4 col-md-6 choose-feature_wrapp" data-aos="fade-up" data-aos-delay="300">
                     <div class="choose-feature">
-                        <div class="box-img"><img src="{{ asset('assets/img/normal/feature_1_2.jpg') }}" alt="Icon"></div>
+                        <div class="box-img"><img src="{{ asset('assets/img/icon/target.png') }}" alt="Icon"></div>
                         <div class="choose-feature_content">
                             <h3 class="box-title">Our Mission</h3>
                             <p class="box-text">Our mission is to be a high-performance company that values and nurtures long-term relationships with our clients.</p>
@@ -102,10 +94,19 @@
                 </div>
                 <div class="col-lg-4 col-md-6 choose-feature_wrapp" data-aos="fade-up" data-aos-delay="400">
                     <div class="choose-feature">
-                        <div class="box-img"><img src="{{ asset('assets/img/normal/feature_1_3.jpg') }}" alt="Icon"></div>
+                        <div class="box-img"><img src="{{ asset('assets/img/icon/visionary.png') }}" alt="Icon"></div>
                         <div class="choose-feature_content">
                             <h3 class="box-title">Our Vision</h3>
                             <p class="box-text">To be the most trusted travel partner, delivering exceptional experiences and making every journey unforgettable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 choose-feature_wrapp" data-aos="fade-up" data-aos-delay="200">
+                    <div class="choose-feature">
+                        <div class="box-img"><img src="{{ asset('assets/img/icon/growth.png') }}" alt="Icon"></div>
+                        <div class="choose-feature_content">
+                            <h3 class="box-title">Our Value</h3>
+                            <p class="box-text">Our Value is to become our clients’ first choice. We strive to be the most professional and customer-focused travel consultants, using our knowledge, experience, and connections to fulfill all their holiday needs.</p>
                         </div>
                     </div>
                 </div>
