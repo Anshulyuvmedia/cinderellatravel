@@ -130,6 +130,7 @@ class WebsiteController extends Controller
     public function jobsubmit(Request $request)
     {
         // Validate the form data
+        dd();
         $validated = $request->validate([
             'full_name' => 'required|string|min:3|max:100',
             'email' => 'required|email|max:255',
