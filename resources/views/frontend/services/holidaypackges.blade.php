@@ -1,5 +1,10 @@
 @extends('frontend.layout.websitemain')
 @section('content')
+<style>
+    html,body{
+        scroll-behavior: smooth;
+    }
+</style>
 <div class="breadcumb-wrapper" data-bg-src="{{ asset('assets/img/bg/breadcumb-bg.jpg') }}" data-aos="fade-down"
     data-aos-delay="100">
     <div class="container">
@@ -32,13 +37,13 @@
                             <div class="col-md-4 mb-3">
                                 <div class=" tour-box th-ani gsap-cursor">
                                     <div class="tour-box_img global-img">
-                                        <a href="{{ route('contactus') }}">
+                                        <a href="#form-section">
                                             <img src="{{ asset('assets/img/services/europepackage.webp') }}" alt="image">
                                         </a>
                                     </div>
                                     <div class="tour-content">
                                         <h3 class="box-title">
-                                            <a href="{{ route('contactus') }}">Europe Holiday Packages</a>
+                                            <a href="#form-section">Europe Holiday Packages</a>
                                         </h3>
                                         <p>Stroll through the beaches and explore the wild in the cultural island with
                                             your better half. maldives is an all-in-one experience.</p>
@@ -48,13 +53,13 @@
                             <div class="col-md-4 mb-3">
                                 <div class=" tour-box th-ani gsap-cursor">
                                     <div class="tour-box_img global-img">
-                                        <a href="{{ route('contactus') }}">
+                                        <a href="#form-section">
                                             <img src="{{ asset('assets/img/services/usapackage.webp') }}" alt="image">
                                         </a>
                                     </div>
                                     <div class="tour-content">
                                         <h3 class="box-title">
-                                            <a href="{{ route('contactus') }}">USA Holiday Packages</a>
+                                            <a href="#form-section">USA Holiday Packages</a>
                                         </h3>
                                         <p>
                                             Visit usa - the third largest continent in the world. packed to the brim
@@ -67,13 +72,13 @@
                             <div class="col-md-4 mb-3">
                                 <div class=" tour-box th-ani gsap-cursor">
                                     <div class="tour-box_img global-img">
-                                        <a href="{{ route('contactus') }}">
+                                        <a href="#form-section">
                                             <img src="{{ asset('assets/img/services/australiapackage.webp') }}" alt="image">
                                         </a>
                                     </div>
                                     <div class="tour-content">
                                         <h3 class="box-title">
-                                            <a href="{{ route('contactus') }}">Australia Holiday Packages</a>
+                                            <a href="#form-section">Australia Holiday Packages</a>
                                         </h3>
                                         <p>A trip to australia is a must if you crave for a blend of adventure, scuba
                                             diving, colorful mountains, rich wild life and much more.
@@ -84,13 +89,13 @@
                             <div class="col-md-4 mb-3">
                                 <div class=" tour-box th-ani gsap-cursor">
                                     <div class="tour-box_img global-img">
-                                        <a href="{{ route('contactus') }}">
+                                        <a href="#form-section">
                                             <img src="{{ asset('assets/img/services/newzealandpackage.webp') }}" alt="image">
                                         </a>
                                     </div>
                                     <div class="tour-content">
                                         <h3 class="box-title">
-                                            <a href="{{ route('contactus') }}">New Zealand Packages</a>
+                                            <a href="#form-section">New Zealand Packages</a>
                                         </h3>
                                         <p>The land of hidden gems, unexplored grasslands, temple towns, bustling
                                             streets and golden beaches; this is asia for you.</p>
@@ -104,7 +109,7 @@
                                     </div>
                                     <div class="tour-content">
                                         <h3 class="box-title">
-                                            <a href="{{ route('contactus') }}">Asia Holiday Packages</a>
+                                            <a href="#form-section">Asia Holiday Packages</a>
                                         </h3>
                                         <p>Stroll through the beaches and explore the wild in the cultural island with
                                             your better half. maldives is an all-in-one experience.</p>
@@ -114,16 +119,18 @@
                             <div class="col-md-4 mb-3">
                                 <div class=" tour-box th-ani gsap-cursor">
                                     <div class="tour-box_img global-img">
-                                        <a href="{{ route('contactus') }}">
+                                        <a href="#form-section">
                                             <img src="{{ asset('assets/img/services/canadapackages.webp') }}" alt="image"></a>
                                     </div>
                                     <div class="tour-content">
                                         <h3 class="box-title">
-                                            <a href="{{ route('contactus') }}">Canada Holiday Packages</a>
+                                            <a href="#form-section">Canada Holiday Packages</a>
                                         </h3>
+                                        <div id="form-section"></div>
                                         <p>Being the second largest country of the world, Canada has a lot to offer to
                                             visitors and no matter what tourists might be looking for</p>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -187,7 +194,7 @@
                         <h3 class="widget_title">Destinations</h3>
                         <ul class="list-unstyled">
                             <li>
-                                 <a href="{{ route('contactus') }}">
+                                 <a href="#form-section">
                     <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
                     Europe
                     </a>
@@ -225,7 +232,7 @@
                     </ul>
             </div>--}}
 
-            <div class="widget widget_tag_cloud" data-aos="fade-left" data-aos-delay="300">
+            <div class="widget widget_tag_cloud" data-aos="fade-left">
                 <h3 class="widget_title">Contact Us</h3>
                 <div class="th-widget-contact">
                     <div class="info-box_text">

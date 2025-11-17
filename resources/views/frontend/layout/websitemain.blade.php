@@ -76,7 +76,7 @@
 <body>
 
     <!-- Modal -->
-    <div class="modal fade" id="travelBookingModal" tabindex="-1" aria-labelledby="travelModalLabel" aria-hidden="true">
+    <div class="modal fade" id="travelBookingModal" tabindex="-1" aria-labelledby="travelModalLabel" aria-hidden="true" style="z-index: 99;">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -615,6 +615,9 @@
 
                 if (!bookingForm.checkValidity()) {
                     bookingForm.classList.add('was-validated');
+                    setTimeout(() => {
+                        bookingForm.classList.remove('was-validated');
+                    }, 3000);
                     return;
                 }
 

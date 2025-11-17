@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>D3 World Map - 12 Countries No Overlap</title>
+    <title>D3 World Map - Circular Flags</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -11,88 +11,91 @@
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 
     <style>
-        svg,
-        .zoom-rect {
-            display: flex;
-            justify-content: center;
+        svg {
+            display: block;
             width: 100%;
-            height: 90vh;
-            background: #ffffff;
-            margin: auto;
+            height: 100%;
 
         }
 
         .country {
-            fill: #c8e6f5;
-            stroke: #4a90e2;
+            fill: #474B54;
+            stroke: #fff;
             stroke-width: 0.5;
             transition: all 0.3s ease;
             cursor: pointer;
-            pointer-events: auto;
         }
 
-        .country:hover {
-            fill: #4D96A8;
-            stroke: #4D96A8;
+        .country.highlighted {
+            fill: #0F76BD;
+            stroke: #0F76BD;
         }
 
-        .country.active {
-            fill: #c8e6f5 !important;
-            stroke: #4a90e2 !important;
-            stroke-width: 0.5 !important;
+
+        text {
+            fill: #0F76BD;
         }
 
+        /* Customize the flag indicator group */
         .flag-indicator-group {
-            cursor: pointer;
-            pointer-events: auto;
+            transition: transform 0.2s ease;
         }
 
-        .flag-indicator-bg {
-            fill: white;
-            stroke: #333;
-            stroke-width: 2;
-            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
-            transition: all 0.3s ease;
-            pointer-events: auto;
+        /* Circle sizing - smaller base */
+        .flag-circle {
+            r: 20px;
+            fill: #ffffff;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
-        .flag-indicator-bg:hover {
-            stroke: #4D96A8;
-            stroke-width: 2.5;
-            filter: drop-shadow(0 0 12px #4D96A8);
+        /* Image sizing - BIGGER, goes outside circle */
+        .flag-indicator-group image {
+            width: 70px;
+            /* बड़ा - circle से बाहर जाए */
+            height: 70px;
+            /* x: -35px;
+            /* Center it on the circle */
+            /* y: -35px;
+            Center it on the circle */
         }
 
-        .flag-indicator-bg.active {
-            fill: #e3f2fd !important;
-            stroke: #4D96A8 !important;
-            stroke-width: 2.5 !important;
-            filter: drop-shadow(0 0 12px #ff6b6b) !important;
-        }
-
-        .flag-indicator-image {
-            pointer-events: none;
-        }
-
+        /* Text label styling */
         .country-label {
-            fill: #333;
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 600;
             text-anchor: middle;
+            fill: #0F76BD;
             pointer-events: none;
-            text-shadow: 0 0 3px white, 0 0 5px white;
-            opacity: 1;
-            visibility: visible;
-            transition: all 0.2s ease;
+            y: 65px;
+            /* नीचे लगाओ */
         }
 
-        .flag-indicator-group:hover .country-label {
-            fill: #4D96A8;
-            font-size: 13px;
+        /* Responsive sizing */
+        @media (max-width: 768px) {
+            .flag-circle {
+                r: 20px;
+                /* circle same रहे */
+            }
+
+            .flag-indicator-group image {
+                width: 80px;
+                /* image बड़ा हो */
+                height: 80px;
+                x: -40px;
+                y: -40px;
+            }
+
+            .country-label {
+                font-size: 12px;
+                y: 75px;
+            }
         }
+
+
 
         .leader-line {
-            stroke: #999;
-            stroke-width: 2;
+            stroke: #0F76BD;
+            stroke-width: 4;
             fill: none;
             pointer-events: none;
             opacity: 0.4;
@@ -101,45 +104,38 @@
         }
 
         .leader-line.active {
-            stroke: #4D96A8 !important;
+            stroke: #0F76BD !important;
             opacity: 0.8 !important;
             stroke-width: 3 !important;
             stroke-dasharray: none !important;
         }
 
         .leader-arrow {
-            fill: #999;
+            fill: #555;
             pointer-events: none;
             transition: all 0.3s ease;
         }
 
         .leader-arrow.active {
-            fill: #4D96A8 !important;
+            fill: #0F76BD !important;
         }
 
-        .tippy-box[data-theme~='light'] {
-            background-color: #fff;
-            color: #333;
-            border: 2px solid #4D96A8;
+        .tippy-box[data-theme~='dark'] {
+            background-color: #1e1e1e;
+            color: #0F76BD;
+            border: 2px solid #0F76BD;
             border-radius: 12px;
             padding: 16px;
             font-size: 14px;
-            box-shadow: 0 10px 32px #4D96A8;
-            z-index: 10000 !important;
+            box-shadow: 0 10px 32px rgba(0, 212, 255, 0.3);
         }
 
         .tippy-arrow {
-            color: #fff !important;
+            color: #1e1e1e !important;
         }
 
         .tooltip-content {
             text-align: center;
-        }
-
-        .tooltip-trigger {
-            position: absolute;
-            z-index: 55;
-            background-color: green;
         }
 
         .tooltip-flag {
@@ -148,48 +144,32 @@
             border-radius: 6px;
             margin-bottom: 12px;
             object-fit: cover;
-            border: 2px solid #ddd;
+            border: 2px solid #0F76BD;
         }
 
         .tooltip-country {
             font-weight: bold;
             font-size: 16px;
             margin-bottom: 8px;
-            color: #4D96A8;
+            color: #00ffff;
         }
 
         .tooltip-phone {
             font-size: 13px;
-            color: #0066cc;
+            color: #0F76BD;
             font-weight: 500;
             margin-bottom: 8px;
         }
 
         .tooltip-contacts {
-            border-top: 1px solid #eee;
+            border-top: 1px solid #444;
             padding-top: 8px;
             font-size: 12px;
         }
 
         .contact-item {
             margin: 4px 0;
-            color: #666;
-            text-align: left;
-        }
-
-        .zoom-rect {
-            cursor: grab;
-            fill: none;
-            pointer-events: all;
-        }
-
-        .zoom-rect:active {
-            cursor: grabbing;
-        }
-
-        /* Better collision detection - spread indicators more */
-        .indicators {
-            pointer-events: auto;
+            color: #aaa;
         }
 
         .draggable-flag {
@@ -198,21 +178,20 @@
 
         .draggable-flag.dragging {
             opacity: 0.8;
-            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.8));
         }
 
         .selected-info {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: white;
-            border: 3px solid #0072C6;
+            background: #1e1e1e;
+            border: 3px solid #0F76BD;
             border-radius: 12px;
             padding: 20px;
             width: 320px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.3);
             z-index: 1000;
-            font-family: Arial, sans-serif;
             display: none;
         }
 
@@ -236,9 +215,9 @@
         .selected-info-header {
             font-size: 18px;
             font-weight: bold;
-            color: #0072C6;
+            color: #00ffff;
             margin-bottom: 12px;
-            border-bottom: 2px solid #0072C6;
+            border-bottom: 2px solid #0F76BD;
             padding-bottom: 8px;
         }
 
@@ -248,20 +227,21 @@
             border-radius: 8px;
             margin-bottom: 12px;
             object-fit: cover;
-            border: 2px solid #ddd;
+            border: 2px solid #0F76BD;
         }
 
         .selected-info-item {
             margin: 8px 0;
             padding: 8px;
-            background: #f5f5f5;
+            background: #2a2a2a;
             border-radius: 6px;
             font-size: 13px;
+            color: #aaa;
         }
 
         .selected-info-label {
             font-weight: bold;
-            color: #0072C6;
+            color: #0F76BD;
         }
 
         .selected-info-close {
@@ -270,19 +250,21 @@
             right: 10px;
             width: 30px;
             height: 30px;
-            background: #4D96A8;
+            background: #0F76BD;
             border: none;
             border-radius: 50%;
-            color: white;
+            color: #1a1a1a;
             font-size: 20px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: bold;
         }
 
         .selected-info-close:hover {
-            background: #ff4444;
+            background: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
         }
     </style>
 </head>
@@ -328,8 +310,14 @@
 
         let selectedCountry = null;
         let draggedCountry = null;
+        // const zoom = d3.zoom()
+        //       .scaleExtent([1, 8])
+        //       .on("zoom", (event) => {
+        //         g.attr("transform", event.transform);
+        //         updateLeaderLines();
+        //       });    
 
-        // ⭐ IMPROVED POSITIONING - NO OVERLAPS
+        //     svg.call(zoom);
         const countries = [{
                 id: 1,
                 name: "Freetown",
@@ -537,21 +525,28 @@
         ];
 
         const g = svg.append("g");
-        g.attr('transform', 'translate(-361.9999694824219,-23) scale(1)')
-
+        g.attr("transform", "translate(-261,-150) scale(1)")
         const countriesGroup = g.append("g").attr("class", "countries-group");
         const leaderLinesGroup = g.append("g").attr("class", "leader-lines");
         const indicatorGroup = g.append("g").attr("class", "indicators");
 
-        const countryIndexMap = {};
-        const countryOffsets = {}; // Store dragged offsets
+        // Create SVG defs for circular clipping
+        const defs = svg.append("defs");
+        countries.forEach(country => {
+            defs.append("clipPath")
+                .attr("id", `clip-circle-${country.id}`)
+                .append("circle")
+                .attr("cx", 35)
+                .attr("cy", 35)
+                .attr("r", 20);
+        });
 
-        // Initialize offsets
+        const countryOffsets = {};
         countries.forEach(c => {
             countryOffsets[c.id] = JSON.parse(JSON.stringify(c.indicatorOffset));
         });
 
-
+        const targetCountries = countries.map(c => c.country);
 
         function closeSelectedInfo() {
             selectedCountry = null;
@@ -559,18 +554,9 @@
             clearHighlight();
         }
 
-        // const zoom = d3.zoom()
-        //     .scaleExtent([1, 8])
-        //     .on("zoom", (event) => {
-        //         g.attr("transform", event.transform);
-        //         updateLeaderLines();
-        //     });
-
-        // svg.call(zoom);
-
         function clearHighlight() {
             countriesGroup.selectAll(".country").classed("active", false);
-            indicatorGroup.selectAll(".flag-indicator-bg").classed("active", false);
+            indicatorGroup.selectAll(".flag-indicator-group").classed("active", false);
             leaderLinesGroup.selectAll(".leader-line").classed("active", false);
             leaderLinesGroup.selectAll(".leader-arrow").classed("active", false);
         }
@@ -581,31 +567,30 @@
             countries.forEach((country) => {
                 const countryCoords = projection([country.long, country.lat]);
                 const indicatorCoords = [
-                    countryCoords[0] + country.indicatorOffset.x,
-                    countryCoords[1] + country.indicatorOffset.y
+                    countryCoords[0] + countryOffsets[country.id].x,
+                    countryCoords[1] + countryOffsets[country.id].y
                 ];
 
                 leaderLinesGroup.append("line")
                     .attr("class", `leader-line leader-line-${country.id}`)
-                    .attr("x1", indicatorCoords[0] + 42)
-                    .attr("y1", indicatorCoords[1] + 30)
+                    .attr("x1", indicatorCoords[0] + 35)
+                    .attr("y1", indicatorCoords[1] + 35)
                     .attr("x2", countryCoords[0])
                     .attr("y2", countryCoords[1]);
 
                 const angle = Math.atan2(
-                    countryCoords[1] - (indicatorCoords[1] + 25),
-                    countryCoords[0] - (indicatorCoords[0] + 40)
+                    countryCoords[1] - (indicatorCoords[1] + 35),
+                    countryCoords[0] - (indicatorCoords[0] + 35)
                 );
                 const arrowSize = 8;
 
                 leaderLinesGroup.append("polygon")
                     .attr("class", `leader-arrow leader-arrow-${country.id}`)
                     .attr("points", `
-            ${countryCoords[0]},${countryCoords[1]}
-            ${countryCoords[0] - arrowSize * Math.cos(angle - Math.PI / 6)},${countryCoords[1] - arrowSize * Math.sin(angle - Math.PI / 6)}
-            ${countryCoords[0] - arrowSize * Math.cos(angle + Math.PI / 6)},${countryCoords[1] - arrowSize * Math.sin(angle + Math.PI / 6)}
-          `)
-                    .style("pointer-events", "none");
+                        ${countryCoords[0]},${countryCoords[1]}
+                        ${countryCoords[0] - arrowSize * Math.cos(angle - Math.PI / 6)},${countryCoords[1] - arrowSize * Math.sin(angle - Math.PI / 6)}
+                        ${countryCoords[0] - arrowSize * Math.cos(angle + Math.PI / 6)},${countryCoords[1] - arrowSize * Math.sin(angle + Math.PI / 6)}
+                    `);
             });
         }
 
@@ -618,51 +603,30 @@
                     .data(worldCountries.features)
                     .enter()
                     .append("path")
-                    .attr("class", "country")
-                    .attr("d", path)
-                    .attr("data-idx", (d, i) => {
-                        countryIndexMap[i] = d;
-                        return i;
+                    .attr("class", d => {
+                        const props = d.properties;
+                        const isHighlighted = targetCountries.some(tc =>
+                            props.name && props.name.includes(tc)
+                        );
+                        return isHighlighted ? "country highlighted" : "country";
                     })
-                    .on("mouseenter", function(event, d) {
-                        const idx = d3.select(this).attr("data-idx");
-                        let matchedCountry = null;
-                        countries.forEach(c => {
-                            if (c.id.toString() === idx || countries.indexOf(c) === parseInt(idx)) {
-                                matchedCountry = c;
-                            }
-                        });
-
-                        if (!matchedCountry) {
-                            matchedCountry = countries[idx % countries.length];
-                        }
-
-                        if (matchedCountry) {
-                            countriesGroup.selectAll(".country").classed("active", false);
+                    .attr("d", path)
+                    .on("mouseenter", function() {
+                        if (!selectedCountry) {
                             d3.select(this).classed("active", true);
-
-                            indicatorGroup.selectAll(".flag-indicator-bg").classed("active", false);
-                            indicatorGroup.selectAll(`.flag-indicator-${matchedCountry.id} .flag-indicator-bg`)
-                                .classed("active", true);
-
-                            leaderLinesGroup.selectAll(".leader-line, .leader-arrow").classed("active", false);
-                            leaderLinesGroup.selectAll(`.leader-line-${matchedCountry.id}`)
-                                .classed("active", true);
-                            leaderLinesGroup.selectAll(`.leader-arrow-${matchedCountry.id}`)
-                                .classed("active", true);
                         }
                     })
                     .on("mouseleave", function() {
-                        clearHighlight();
+                        if (!selectedCountry) {
+                            clearHighlight();
+                        }
                     });
 
                 updateLeaderLines();
                 createIndicators();
 
                 function createIndicators() {
-                    indicatorGroup.selectAll(".flag-indicator-group").remove();
-
-                    countries.forEach((country, idx) => {
+                    countries.forEach((country) => {
                         const countryCoords = projection([country.long, country.lat]);
                         const indicatorCoords = [
                             countryCoords[0] + countryOffsets[country.id].x,
@@ -670,11 +634,9 @@
                         ];
 
                         const flagGroup = indicatorGroup.append("g")
-                            .attr("class", `flag-indicator-group flag-indicator-${country.id} draggable-flag`)
-                            .attr("transform", `translate(${indicatorCoords[0]},${indicatorCoords[1]})`)
-                            .attr("pointer-events", "auto");
+                            .attr("class", `flag-indicator-group draggable-flag flag-indicator-${country.id}`)
+                            .attr("transform", `translate(${indicatorCoords[0]},${indicatorCoords[1]})`);
 
-                        // Drag behavior
                         const drag = d3.drag()
                             .on("start", function() {
                                 draggedCountry = country.id;
@@ -695,86 +657,35 @@
 
                         flagGroup.call(drag);
 
-                        const bg = flagGroup.append("rect")
-                            .attr("class", "flag-indicator-bg")
+                        // Circular background
+                        flagGroup.append("circle")
+                            .attr("class", "flag-circle")
+                            .attr("cx", 35)
+                            .attr("cy", 35)
+                            .attr("r", 35);
+
+                        // Circular flag image with clip-path
+                        flagGroup.append("image")
+                            .attr("xlink:href", country.flagUrl)
                             .attr("x", 0)
                             .attr("y", 0)
-                            .attr("width", 80)
-                            .attr("height", 50)
-                            .attr("rx", 6);
-
-                        flagGroup.append("image")
-                            .attr("class", "flag-indicator-image")
-                            .attr("xlink:href", country.flagUrl)
-                            .attr("x", 5)
-                            .attr("y", 5)
                             .attr("width", 70)
-                            .attr("height", 40);
+                            .attr("height", 70)
+                            .attr("clip-path", `url(#clip-circle-${country.id})`);
 
                         flagGroup.append("text")
                             .attr("class", "country-label")
-                            .attr("x", 40)
-                            .attr("y", 65)
+                            .attr("x", 35)
+                            .attr("y", 70)
                             .text(country.name);
 
-                        // ⭐ TOOLTIP - NOW WORKING PROPERLY
-                        const tooltipHTML = `
-              <div class="tooltip-content">
-                <img src="${country.flagUrl}" alt="${country.country}" class="tooltip-flag" style="width: 120px; height: 80px; border-radius: 6px; margin-bottom: 12px; object-fit: cover; border: 2px solid #ddd;">
-                <div class="tooltip-country" style="font-weight: bold; font-size: 16px; margin-bottom: 8px; color: #4D96A8;">${country.fullName}</div>
-                <div class="tooltip-phone" style="font-size: 13px; color: #0066cc; font-weight: 500; margin-bottom: 8px;">📞 ${country.phone}</div>
-                <div class="tooltip-contacts" style="border-top: 1px solid #eee; padding-top: 8px; font-size: 12px;">
-                  <div class="contact-item" style="margin: 4px 0; color: #666;"><strong>Email:</strong>salesfna@lamairatravel.com</div>
-                </div>
-              </div>
-            `;
-
-                        // Use tippy directly on the SVG rect and render the tooltip into document.body.
-                        // Avoid inserting HTML nodes inside SVG groups (invalid in many browsers).
-                        tippy(bg.node(), {
-                            content: tooltipHTML,
-                            allowHTML: true,
-                            theme: 'light',
-                            placement: 'right',
-                            delay: [150, 100],
-                            animation: 'scale-subtle',
-                            arrow: true,
-                            interactive: true,
-                            maxWidth: 280,
-                            appendTo: document.body,
-                            popperOptions: {
-                                modifiers: [{
-                                        name: 'offset',
-                                        options: {
-                                            offset: [0, 12]
-                                        }
-                                    },
-                                    {
-                                        name: 'preventOverflow',
-                                        options: {
-                                            boundary: 'viewport',
-                                            padding: 8
-                                        }
-                                    }
-                                ]
-                            },
-                            onShow(instance) {
-                                // Re-set content each time in case offsets or fields changed dynamically
-                                instance.setContent(tooltipHTML);
-                            }
-                        });
-
+                     
                         flagGroup
                             .on("mouseenter", function() {
                                 if (!draggedCountry) {
-                                    d3.select(this).select(".flag-indicator-bg").classed("active", true);
-
-                                    countriesGroup.selectAll(".country").classed("active", false);
-                                    countriesGroup.selectAll(`.country[data-idx="${idx}"]`).classed("active", true);
-
-                                    leaderLinesGroup.selectAll(".leader-line, .leader-arrow").classed("active", false);
-                                    d3.selectAll(`.leader-line-${country.id}`).classed("active", true);
-                                    d3.selectAll(`.leader-arrow-${country.id}`).classed("active", true);
+                                    d3.select(this).classed("active", true);
+                                    leaderLinesGroup.selectAll(`.leader-line-${country.id}`).classed("active", true);
+                                    leaderLinesGroup.selectAll(`.leader-arrow-${country.id}`).classed("active", true);
                                 }
                             })
                             .on("mouseleave", function() {
@@ -784,11 +695,6 @@
                             });
                     });
                 }
-
-
-
-
-
             })
             .catch(error => console.error("Error loading map:", error));
     </script>

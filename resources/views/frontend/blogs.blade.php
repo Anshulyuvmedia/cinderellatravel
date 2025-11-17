@@ -4,7 +4,8 @@
     .small.text-muted {
         display: none;
     }
-    .d-flex.justify-items-center.justify-content-between{
+
+    .d-flex.justify-items-center.justify-content-between {
         justify-content: center;
     }
 </style>
@@ -46,9 +47,10 @@
                         </div>
                         <h5 class="card-title">
                             <a href="{{ route('blogdetail', ['id' => $data->id]) }}" class="text-dark text-decoration-none">
-                                {{ Str::limit($data->blogname, 60) }}
+                                {{ Str::limit($data->blogname, 30) }}
                             </a>
                         </h5>
+                        <p> {!!   Str::limit($data->blogdescription, 100) !!}</p>
                         <a href="{{ route('blogdetail', ['id' => $data->id]) }}" class="th-btn style4 th-icon mt-3">
                             Read More
                         </a>

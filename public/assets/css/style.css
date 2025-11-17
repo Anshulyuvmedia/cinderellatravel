@@ -4074,8 +4074,8 @@ a.text-theme:hover,
 .ripple-animation3,
 .counter-card .counter-shape:after,
 .counter-item .counter-shape:after {
-    -webkit-animation-duration: var(--ripple-ani-duration);
-    animation-duration: var(--ripple-ani-duration);
+    /* -webkit-animation-duration: var(--ripple-ani-duration); */
+    /* animation-duration: var(--ripple-ani-duration); */
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
@@ -24612,9 +24612,9 @@ filter: brightness(0) invert(1);
 
 @media (max-width: 767px) {
     .counter-card {
-        width: 250px;
-        height: 250px;
-        padding: 81px 28px;
+        width: 160px;
+        height: 160px;
+        padding: 30px 28px;
         margin-top: 150px;
     }
 }
@@ -24638,8 +24638,8 @@ filter: brightness(0) invert(1);
 
 @media (max-width: 767px) {
     .counter-card .counter-shape {
-        width: 290px;
-        height: 290px;
+        width: 200px;
+        height: 200px;
         inset: -20px;
     }
 }
@@ -24648,19 +24648,83 @@ filter: brightness(0) invert(1);
     position: absolute;
     top: unset;
     bottom: 55px;
-    right: 7px;
+    right: 3px;
     width: 24px;
     height: 24px;
     display: block;
     border-radius: 50%;
     background-color: rgba(28, 168, 203, 0.2);
     z-index: 2;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media(width > 576px){
+        right:7px;
+    }
 }
 
 @media (max-width: 767px) {
     .counter-card .counter-shape span {
-        bottom: 51px;
-        right: 13px;
+        bottom: 39px;
     }
 }
 
@@ -24708,8 +24772,8 @@ filter: brightness(0) invert(1);
 
 @media (max-width: 767px) {
     .counter-card-wrap:nth-child(even) .counter-card .counter-shape span {
-        top: 22px;
-        right: 39px;
+        top: 11px;
+        right: 30px;
     }
 }
 
@@ -24722,18 +24786,25 @@ filter: brightness(0) invert(1);
 
 .counter-card .box-number {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 37px;
+    line-height: 38px;
     text-transform: capitalize;
     color: var(--black-color2);
     margin-bottom: 7px;
+    @media(width > 576px){
+        font-size: 50px;
+        line-height: 48px;
+    }
 }
 
 .counter-card .counter-title {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-    color: var(--black-color2);
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--black-color2); 
+    @media(width > 576px){
+        font-size: 27px;
+    }
 }
 
 .counter-card:hover .counter-shape {
@@ -35586,7 +35657,7 @@ filter: brightness(0) invert(1);
 }
 
 .invalid-feedback {
-    display: block;
+    /* display: block; */
 }
 
 /* File Preview Styles */

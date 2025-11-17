@@ -15,178 +15,253 @@
     </div>
 </div>
 <section class="testimonial-area2 overflow-hidden space" id="testi-sec">
-    <div class="container">
+    <div class="container-fluid">
         <div class="title-area text-center"><span class="sub-title">Our Branches</span>
             <h2 class="sec-title">Making a presence in every part of the world!</h2>
         </div>
-        <x-map />
+        <div class="row">
+            <div class="col-lg-8">
+                <x-map />
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-3">
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/in.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Ajmer</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap-2 align-items-center">
+                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Ouagadougou</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Freetown</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/sn.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Dakar</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Abuja</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Port Harcourt</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Lagos</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Bobo-Dioulasso</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Accra</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/ml.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Bamako</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/gm.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Banjul</h4>
+                    </div>
+                    <div class="d-flex col-lg-6 gap- align-items-center">
+                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                        <h4>Monrovia</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-        {{--<div class="row">
-            <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="300">
-                <div class=" tour-box th-ani gsap-cursor">
-                    <div class="tour-box_img global-img">
-                        <img src="{{ asset('assets/img/flag/sierra-leone-waving.webp') }}" alt="image">
-    </div>
-    <div class="tour-content">
-        <h3 class="box-title">
-            <a href="#">Freetown, Sierra Leone</a>
-        </h3>
-        <p>+23278676849</p>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="400">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Liberia.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Monrovia, Liberia</a>
-                </h3>
-                <p>+231 77 508 1433</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="500">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Nigeria.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Lagos, Nigeria</a>
-                </h3>
-                <p>+234 904 623 4551</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="600">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Burkina Faso.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Ouagadougou, Burkina Faso</a>
-                </h3>
-                <p>+226 05054651</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="700">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Nigeria.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Abuja, Nigeria</a>
-                </h3>
-                <p>+234 816 958 1101</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="800">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Nigeria.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Port Harcourt, Nigeria</a>
-                </h3>
-                <p>+234 810 994 0319</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="900">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Mali.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Bamako, Mali</a>
-                </h3>
-                <p>+232 8021 2175</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1000">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Burkina Faso.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Bobo-Dioulasso, Burkina Faso</a>
-                </h3>
-                <p>+226 0505 4651</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1100">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/India.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Ajmer, India</a>
-                </h3>
-                <p>+91 784 990 9355</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1200">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Senegal.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Dakar, Senegal</a>
-                </h3>
-                <p>+232 8021 2178</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1300">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Ghana.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Accra, Ghana</a>
-                </h3>
-                <p>+233 53 110 0930</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1400">
-        <div class=" tour-box th-ani gsap-cursor">
-            <div class="tour-box_img global-img">
-                <img src="{{ asset('assets/img/flag/Gambia.webp') }}" alt="image">
-            </div>
-            <div class="tour-content">
-                <h3 class="box-title">
-                    <a href="#">Banjul, Gambia</a>
-                </h3>
-                <p>+232 8021 2177</p>
-            </div>
-        </div>
-    </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Freetown, Sierra Leone</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
 
-    </div>--}}
-    <div class="shape-mockup movingX d-none d-xl-block" data-top="30%" data-left="-9%"><img class="gmovingX"
-            src="assets/img/shape/shape_7.png" alt="shape"></div>
-    <div class="shape-mockup spin d-none d-xl-block" data-bottom="30%" data-right="-10%"><img
-            src="assets/img/shape/shape_2_5.png" alt="shape"></div>
-    <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-left="-5%"><img
-            src="assets/img/shape/shape_2_2.png" alt="shape"></div>
+                            <p class="mb-0">+23278676849</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class=" tour-box th-ani gsap-cursor">
+
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Monrovia, Liberia</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+231 77 508 1433</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class=" tour-box th-ani gsap-cursor">
+
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Lagos, Nigeria</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+234 904 623 4551</p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="600">
+                    <div class=" tour-box th-ani gsap-cursor">
+
+                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                                <h3 class="box-title">
+                                    <a href="#" style="color:#fff">Ouagadougou, Burkina Faso</a>
+                                </h3>
+                            </div>
+                            <div class="tour-content pt-3  text-center">
+
+                                <p class="mb-0">+226 05054651</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                                <h3 class="box-title">
+                                    <a href="#" style="color:#fff">Abuja, Nigeria</a>
+                                </h3>
+                            </div>
+                            <div class="tour-content pt-3  text-center">
+
+                                <p class="mb-0">+234 816 958 1101</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="800">
+                    <div class=" tour-box th-ani gsap-cursor">
+
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Port Harcourt, Nigeria</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+234 810 994 0319</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="900">
+                    <div class=" tour-box th-ani gsap-cursor">
+
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Bamako, Mali</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+232 8021 2175</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1000">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Bobo-Dioulasso, Burkina Faso</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+226 0505 4651</p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1100">
+                    <div class=" tour-box th-ani gsap-cursor">
+                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                                <h3 class="box-title">
+                                    <a href="#" style="color:#fff">Ajmer, India</a>
+                                </h3>
+                            </div>
+                            <div class="tour-content pt-3  text-center">
+
+                                <p class="mb-0">+91 784 990 9355</p>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1200">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Dakar, Senegal</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+232 8021 2178</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1300">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Accra, Ghana</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+233 53 110 0930</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1400">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Banjul, Gambia</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+
+                            <p class="mb-0">+232 8021 2177</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="shape-mockup movingX d-none d-xl-block" data-top="30%" data-left="-9%"><img class="gmovingX"
+                src="assets/img/shape/shape_7.png" alt="shape"></div>
+        <div class="shape-mockup spin d-none d-xl-block" data-bottom="30%" data-right="-10%"><img
+                src="assets/img/shape/shape_2_5.png" alt="shape"></div>
+        <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-left="-5%"><img
+                src="assets/img/shape/shape_2_2.png" alt="shape"></div>
     </div>
 </section>
 
@@ -238,8 +313,7 @@
     <div class="container">
         <div class="row py-5 my-lg-5 row-gap-5 flex-row-reverse justify-content-center align-items-center">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.8100802629897!2d74.60030907596033!3d26.461850179319846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be7033dde00eb%3A0xab03ba16aa54326e!2sCinderella%20Travel%20%26%20Tours!5e0!3m2!1sen!2sin!4v1755323416129!5m2!1sen!2sin"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4886.478917090417!2d-13.272074424152743!3d8.482012497309523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04c53c4172d373%3A0xbaa3debe4d8059cb!2s51%20Wilkinson%20Road%2C%20Freetown%2C%20Sierra%20Leone!5e1!3m2!1sen!2sin!4v1763214942727!5m2!1sen!2sin"
                     width="600" height="650" style="border-radius:20px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
