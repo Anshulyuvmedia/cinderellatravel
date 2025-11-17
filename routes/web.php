@@ -53,21 +53,8 @@ Route::controller(WebsiteController::class)->group(function () {
     Route::get('/services/holidaypackges', 'holidaypackges')->name('holidaypackges');
 
     Route::post('/travel-bookings',  'store')->name('travel.bookings.store');
-    Route::post('/job-application',  'jobsubmit')->name('job.application.submit');
-    Route::get('/test-job-email', function () {
-        $jobData = [
-            'full_name' => 'John Doe',
-            'email' => 'applicant@example.com',
-            'phone' => '123-456-7890',
-            'service_type' => 'Sales & Marketing',
-            'message' => 'I am very interested in this position and believe my skills align perfectly with your requirements. I have 5 years of experience in sales and marketing with a proven track record of increasing revenue by 40% in my previous role.',
-            'resume_path' => storage_path('app/public/resumes/sample-resume.pdf'),
-            'resume_name' => 'John_Doe_Resume.pdf',
-        ];
-
-        // Return admin email preview
-        return new JobApplication($jobData);
-    });
+    Route::post('/enquiry', 'enquiry')->name('enquiry');
+   
 });
 
 //Admin Panel Routes

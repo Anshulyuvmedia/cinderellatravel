@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ApplicationSubmitted;
 use App\Mail\JobApplication;
 use App\Mail\TravelBookingMail;
+use App\Mail\Enquiry;
 use App\Models\Blog;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
+use function Illuminate\Log\log;
 
 class WebsiteController extends Controller
 {
@@ -127,54 +131,28 @@ class WebsiteController extends Controller
           
         ]);
     }
-    public function jobsubmit(Request $request)
+
+    public function enquiry(Request $request)
     {
-        // Validate the form data
-        dd();
+        // Validate enquiry form data
+       
         $validated = $request->validate([
-            'full_name' => 'required|string|min:3|max:100',
-            'email' => 'required|email|max:255',
-            'phone' => 'required|regex:/^\d{3}-\d{3}-\d{4}$/',
-            'resume' => 'required|file|mimes:pdf,doc,docx|max:5120', // Max 5MB
-            'service_type' => 'required|in:Air Ticketing,Sales & Marketing,Accountant',
-            'message' => 'required|string|min:10|max:1000',
-        ], [
-            'full_name.required' => 'Full name is required.',
-            'full_name.min' => 'Full name must be at least 3 characters.',
-            'email.required' => 'Email address is required.',
-            'email.email' => 'Please enter a valid email address.',
-            'phone.required' => 'Phone number is required.',
-            'phone.regex' => 'Phone must be in format: 123-456-7890',
-            'resume.required' => 'Resume file is required.',
-            'resume.mimes' => 'Resume must be PDF, DOC, or DOCX file.',
-            'resume.max' => 'Resume file size must not exceed 5MB.',
-            'service_type.required' => 'Please select a service type.',
-            'message.required' => 'Cover letter is required.',
-            'message.min' => 'Cover letter must be at least 10 characters.',
+            'name' => 'required|string|min:2|max:255',
+            'email3' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|max:2000',
         ]);
+        // dd($validated);
+        // Send email to admin with admin subject line
+        Mail::to('devendrayuvmedia@gmail.com')->send(new Enquiry($validated, 'admin'));
 
-        // Store the resume file
-        $resumePath = $request->file('resume')->store('resumes', 'public');
+        // Send confirmation email to customer with customer subject line
+        Mail::to($validated['email3'])->send(new Enquiry($validated, 'customer'));
 
-        // Prepare email data
-        $mailData = [
-            'full_name' => $validated['full_name'],
-            'email' => $validated['email'],
-            'phone' => $validated['phone'],
-            'service_type' => $validated['service_type'],
-            'message' => $validated['message'],
-            'resume_path' => storage_path('app/public/' . $resumePath),
-            'resume_name' => $request->file('resume')->getClientOriginalName(),
-        ];
-
-        try {
-            // Send email to admin with resume attachment
-            Mail::to(config('mail.admin_email'))
-                ->send(new JobApplication($mailData));
-            return back()->with('success', 'Your application has been submitted successfully! Check your email for confirmation.');
-        } catch (\Exception $e) {
-            \Log::error('Job application email failed: ' . $e->getMessage());
-            return back()->with('error', 'Failed to send application. Please try again later.');
-        }
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Your enquiry has been submitted successfully. We will get back to you shortly.',
+        ]);
     }
 }

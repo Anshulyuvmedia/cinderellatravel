@@ -19,58 +19,58 @@
         <div class="title-area text-center"><span class="sub-title">Our Branches</span>
             <h2 class="sec-title">Making a presence in every part of the world!</h2>
         </div>
-        <div class="row">
+        <div class="row column-gap-3">
             <div class="col-lg-8">
                 <x-map />
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 mt-3 mt-lg-0">
                 <div class="row g-3">
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/in.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row  align-items-center">
+                        <img src="https://flagcdn.com/w160/in.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Ajmer</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap-2 align-items-center">
-                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row2 align-items-center">
+                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Ouagadougou</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Freetown</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/sn.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sn.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Dakar</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Abuja</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Port Harcourt</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Lagos</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Bobo-Dioulasso</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Accra</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/ml.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ml.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Bamako</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/gm.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gm.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Banjul</h4>
                     </div>
-                    <div class="d-flex col-lg-6 gap- align-items-center">
-                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:80px ;height:80px;border-radius: 50%; object-fit: cover  ;">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
                         <h4>Monrovia</h4>
                     </div>
                 </div>
@@ -128,28 +128,28 @@
                 <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="600">
                     <div class=" tour-box th-ani gsap-cursor">
 
-                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                                <h3 class="box-title">
-                                    <a href="#" style="color:#fff">Ouagadougou, Burkina Faso</a>
-                                </h3>
-                            </div>
-                            <div class="tour-content pt-3  text-center">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Ouagadougou, Burkina Faso</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
 
-                                <p class="mb-0">+226 05054651</p>
-                            </div>
+                            <p class="mb-0">+226 05054651</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="700">
                     <div class=" tour-box th-ani gsap-cursor">
-                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                                <h3 class="box-title">
-                                    <a href="#" style="color:#fff">Abuja, Nigeria</a>
-                                </h3>
-                            </div>
-                            <div class="tour-content pt-3  text-center">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Abuja, Nigeria</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
 
-                                <p class="mb-0">+234 816 958 1101</p>
-                            </div>
+                            <p class="mb-0">+234 816 958 1101</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="800">
@@ -199,15 +199,15 @@
                 </div>
                 <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1100">
                     <div class=" tour-box th-ani gsap-cursor">
-                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                                <h3 class="box-title">
-                                    <a href="#" style="color:#fff">Ajmer, India</a>
-                                </h3>
-                            </div>
-                            <div class="tour-content pt-3  text-center">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Ajmer, India</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
 
-                                <p class="mb-0">+91 784 990 9355</p>
-                            </div>
+                            <p class="mb-0">+91 784 990 9355</p>
+                        </div>
 
                     </div>
                 </div>
@@ -319,21 +319,21 @@
             </div>
             <div class="col-lg-6 ">
                 <div data-aos="fade-right" data-aos-delay="700">
-                    <form action="https://html.themeholy.com/tourm/demo/mail.php" method="POST"
-                        class="contact-form style2 ajax-contact">
+                    <form action="{{ route('enquiry') }}" method="POST" class="contact-form style2 ">
+                        @csrf
                         <h3 class="sec-title mb-30 text-capitalize">Book a tour</h3>
                         <div class="row">
-                            <div class="col-12 form-group" data-aos="fade-up" data-aos-delay="800">
+                            <div class="col-12 form-group">
                                 <input type="text" class="form-control" name="name" id="name3"
                                     placeholder="First Name">
                                 <i class="fas fa-user"></i>
                             </div>
-                            <div class="col-12 form-group" data-aos="fade-up" data-aos-delay="900">
+                            <div class="col-12 form-group">
                                 <input type="email" class="form-control" name="email3" id="email3"
                                     placeholder="Your Mail">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="form-group col-12" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="form-group col-12">
                                 <select name="subject" id="subject" class="form-select nice-select">
                                     <option value="Select Tour Type" selected="selected" disabled="disabled">Select Tour
                                         Type</option>
@@ -344,12 +344,12 @@
                                     <option value="Western Europe">Western Europe</option>
                                 </select>
                             </div>
-                            <div class="form-group col-12" data-aos="fade-up" data-aos-delay="1100">
+                            <div class="form-group col-12">
                                 <textarea name="message" id="message" cols="30" rows="3" class="form-control"
                                     placeholder="Your Message"></textarea>
                                 <i class="fas fa-comment"></i>
                             </div>
-                            <div class="form-btn col-12 mt-24" data-aos="fade-up" data-aos-delay="1200">
+                            <div class="form-btn col-12 mt-24">
                                 <button type="submit" class="th-btn style3">Send message <img
                                         src="{{ asset('assets/img/icon/plane.svg') }}" alt="plane"></button>
                             </div>

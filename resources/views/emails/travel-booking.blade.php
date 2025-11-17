@@ -1,4 +1,5 @@
 @if ($bookingData['email'] === $mail )
+//client
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,6 +172,7 @@
 </html>
 
 @else
+// admin
 <!DOCTYPE html>
 <html lang="en">
 

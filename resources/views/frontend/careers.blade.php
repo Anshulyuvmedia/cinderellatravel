@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <form action="{{ route('job.application.submit') }}" method="POST" enctype="multipart/form-data"
+        <form action="" method="POST" enctype="multipart/form-data"
             onsubmit="return validateJobForm()" id="jobApplicationForm" data-aos="fade-up" data-aos-delay="600">
             @csrf
             <div class="th-comment-form">

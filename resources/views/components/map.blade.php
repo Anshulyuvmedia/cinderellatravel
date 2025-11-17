@@ -11,12 +11,23 @@
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 
     <style>
+        /* Responsive map container - keeps aspect ratio and lets SVG scale */
+        .map-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         svg {
             display: block;
             width: 100%;
-            height: 100%;
-
+            height: auto;
+            max-height: 80vh;
         }
+
+        /* g[transform] {
+            transform: translate(-261px, -150px) scale(1, 1);
+        } */
 
         .country {
             fill: #474B54;
@@ -43,7 +54,6 @@
 
         /* Circle sizing - smaller base */
         .flag-circle {
-            r: 20px;
             fill: #ffffff;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
@@ -53,10 +63,7 @@
             width: 70px;
             /* बड़ा - circle से बाहर जाए */
             height: 70px;
-            /* x: -35px;
-            /* Center it on the circle */
-            /* y: -35px;
-            Center it on the circle */
+
         }
 
         /* Text label styling */
@@ -78,16 +85,19 @@
             }
 
             .flag-indicator-group image {
-                width: 80px;
-                /* image बड़ा हो */
-                height: 80px;
-                x: -40px;
-                y: -40px;
+                width: 120px;
+                height: 120px;
+                x: -26px;
+                y: -26px;
             }
 
             .country-label {
                 font-size: 12px;
                 y: 75px;
+            }
+
+            circle {
+                r: 35px
             }
         }
 
@@ -195,6 +205,26 @@
             display: none;
         }
 
+        /* Mobile: make the selected info a bottom sheet */
+        @media (max-width: 768px) {
+            .selected-info {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 12px 12px 0 0;
+                padding: 14px;
+                max-height: 60vh;
+                overflow: auto;
+            }
+
+            .country-label {
+                font-size: 20px;
+                y: 78px;
+            }
+        }
+
         .selected-info.active {
             display: block;
             animation: slideIn 0.3s ease;
@@ -292,15 +322,18 @@
         </div>
     </div>
 
-    <svg id="map"></svg>
+    <div class="map-container">
+        <svg id="map" role="img" aria-label="World map with flags"></svg>
+    </div>
 
     <script>
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        // Use a fixed viewBox for consistent scaling; CSS makes it responsive.
+        const width = 1200;
+        const height = 700;
 
         const svg = d3.select("#map")
-            .attr("width", width)
-            .attr("height", height);
+            .attr("viewBox", `0 0 ${width} ${height}`)
+            .attr("preserveAspectRatio", "xMidYMid meet");
 
         const projection = d3.geoMercator()
             .scale(160)
@@ -365,8 +398,8 @@
                 users: 587,
                 flagUrl: "https://flagcdn.com/w160/ng.png",
                 indicatorOffset: {
-                    x: 10,
-                    y: -180
+                    x: -20,
+                    y: -320
                 }
             },
             {
@@ -450,7 +483,7 @@
                 users: 156,
                 flagUrl: "https://flagcdn.com/w160/bf.png",
                 indicatorOffset: {
-                    x: 150,
+                    x: 100,
                     y: 200
                 }
             },
@@ -467,7 +500,7 @@
                 users: 445,
                 flagUrl: "https://flagcdn.com/w160/in.png",
                 indicatorOffset: {
-                    x: 100,
+                    x: 200,
                     y: -140
                 }
             },
@@ -524,13 +557,12 @@
             }
         ];
 
-        const g = svg.append("g");
-        g.attr("transform", "translate(-261,-150) scale(1)")
-        const countriesGroup = g.append("g").attr("class", "countries-group");
-        const leaderLinesGroup = g.append("g").attr("class", "leader-lines");
-        const indicatorGroup = g.append("g").attr("class", "indicators");
+        const g1 = svg.append("g");
+        const countriesGroup = g1.append("g").attr("class", "countries-group");
+        const leaderLinesGroup = g1.append("g").attr("class", "leader-lines");
+        const indicatorGroup = g1.append("g").attr("class", "indicators");
 
-        // Create SVG defs for circular clipping
+        // Create SVG defs for circular clipping (match image size 70x70 -> r=35)
         const defs = svg.append("defs");
         countries.forEach(country => {
             defs.append("clipPath")
@@ -547,6 +579,17 @@
         });
 
         const targetCountries = countries.map(c => c.country);
+
+        function showSelectedInfo(country) {
+            selectedCountry = country;
+            document.getElementById("selectedTitle").textContent = country.fullName;
+            document.getElementById("selectedFlag").src = country.flagUrl;
+            document.getElementById("selectedPhone").textContent = country.phone;
+            document.getElementById("selectedEmail").textContent = country.email;
+            document.getElementById("selectedContact").textContent = country.contact;
+            document.getElementById("selectedUsers").textContent = `${country.users} users`;
+            document.getElementById("selectedInfo").classList.add("active");
+        }
 
         function closeSelectedInfo() {
             selectedCountry = null;
@@ -625,6 +668,19 @@
                 updateLeaderLines();
                 createIndicators();
 
+                // Center the entire map group (`g1`) inside the SVG viewBox
+                // Compute the bounding box of the rendered countries and translate g1
+                // so the map is centered on the available canvas.
+                try {
+                    const bbox = countriesGroup.node().getBBox();
+                    const centerTx = (width - bbox.width) / 2 - bbox.x;
+                    const centerTy = (height - bbox.height) / 2 - bbox.y;
+                    g1.attr("transform", `translate(${centerTx},${centerTy})`);
+                } catch (e) {
+                    // getBBox can throw if element isn't in DOM yet in some environments — ignore.
+                    console.warn('Could not compute bbox to center map:', e);
+                }
+
                 function createIndicators() {
                     countries.forEach((country) => {
                         const countryCoords = projection([country.long, country.lat]);
@@ -662,7 +718,7 @@
                             .attr("class", "flag-circle")
                             .attr("cx", 35)
                             .attr("cy", 35)
-                            .attr("r", 35);
+                            .attr("r", 20);
 
                         // Circular flag image with clip-path
                         flagGroup.append("image")
@@ -676,23 +732,9 @@
                         flagGroup.append("text")
                             .attr("class", "country-label")
                             .attr("x", 35)
-                            .attr("y", 70)
+                            .attr("y", 90)
                             .text(country.name);
-
-                     
-                        flagGroup
-                            .on("mouseenter", function() {
-                                if (!draggedCountry) {
-                                    d3.select(this).classed("active", true);
-                                    leaderLinesGroup.selectAll(`.leader-line-${country.id}`).classed("active", true);
-                                    leaderLinesGroup.selectAll(`.leader-arrow-${country.id}`).classed("active", true);
-                                }
-                            })
-                            .on("mouseleave", function() {
-                                if (!selectedCountry) {
-                                    clearHighlight();
-                                }
-                            });
+                       
                     });
                 }
             })

@@ -1,0 +1,488 @@
+# Laravel Email Templates for Job Management System
+
+## 1. Application Confirmation (Client/Candidate)
+
+**File: `resources/views/emails/application-confirmation.blade.php`**
+
+```blade
+@component('mail::message')
+# Application Confirmation
+
+Hi {{ $candidate['fullName'] }},
+
+Thank you for applying for the **{{ $position }}** position at {{ config('app.name') }}!
+
+We've successfully received your application. Here are the details:
+
+@component('mail::panel')
+**Application Details**
+- **Position Applied:** {{ $position }}
+- **Application Date:** {{ $appliedDate }}
+- **Application ID:** {{ $applicationId }}
+@endcomponent
+
+## Next Steps
+
+Our hiring team will review your application carefully. You can expect to hear back from us within **5-7 business days**. 
+
+In the meantime, you can:
+- Track your application status by [clicking here]({{ $trackingLink }})
+- Update your profile information
+- Apply for other open positions
+
+@component('mail::button', ['url' => $trackingLink, 'color' => 'primary'])
+Track Your Application
+@endcomponent
+
+If you have any questions, feel free to reach out to us at [{{ config('mail.from.address') }}](mailto:{{ config('mail.from.address') }}).
+
+Best regards,  
+**{{ config('app.name') }} - Hiring Team**
+
+@slot('footer')
+@component('mail::footer')
+© {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## 2. Application Received (Admin Notification)
+
+**File: `resources/views/emails/admin-new-application.blade.php`**
+
+```blade
+@component('mail::message')
+# 🎯 New Application Received
+
+A new application has been submitted for review.
+
+@component('mail::panel')
+**Candidate Information**
+- **Name:** {{ $candidate['fullName'] }}
+- **Email:** {{ $candidate['email'] }}
+- **Phone:** {{ $candidate['phoneNumber'] }}
+- **Position:** {{ $position }}
+- **Applied On:** {{ $appliedDate }}
+@endcomponent
+
+**Cover Letter:**
+{{ $candidate['coverLetter'] }}
+
+@component('mail::button', ['url' => $adminDashboardLink, 'color' => 'primary'])
+Review Application
+@endcomponent
+
+---
+
+**Quick Actions:**
+- [View Full Profile]({{ $candidateProfileLink }})
+- [Send Message]({{ $messageLink }})
+- [Schedule Interview]({{ $interviewLink }})
+
+@slot('footer')
+@component('mail::footer')
+Admin Notification - {{ config('app.name') }}
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## 3. Interview Scheduled (Candidate)
+
+**File: `resources/views/emails/interview-scheduled.blade.php`**
+
+```blade
+@component('mail::message')
+# Interview Scheduled ✅
+
+Hi {{ $candidate['fullName'] }},
+
+Congratulations! We're impressed with your application and would like to invite you for an interview.
+
+@component('mail::panel')
+**Interview Details**
+- **Date:** {{ $interviewDate }}
+- **Time:** {{ $interviewTime }} ({{ $timezone }})
+- **Interviewer:** {{ $interviewerName }}
+- **Position:** {{ $position }}
+- **Interview Type:** {{ $interviewType }} (Video Call / In-Person)
+@endcomponent
+
+## How to Join
+
+**Video Call Link:** [{{ $meetingLink }}]({{ $meetingLink }})
+
+**Location:** {{ $location }}
+
+## Preparation Tips
+
+- Please have your resume ready
+- Test your audio and video setup (if video interview)
+- Be ready 5-10 minutes early
+- Have a quiet space for the interview
+
+@component('mail::button', ['url' => $confirmLink, 'color' => 'success'])
+Confirm Your Attendance
+@endcomponent
+
+If you need to reschedule, please reply to this email at least 24 hours in advance.
+
+Looking forward to speaking with you!
+
+Best regards,  
+**{{ $companyName }} - Hiring Team**
+
+@slot('footer')
+@component('mail::footer')
+© {{ date('Y') }} {{ config('app.name') }}
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## 4. Application Status Update (Candidate)
+
+**File: `resources/views/emails/application-status-update.blade.php`**
+
+```blade
+@component('mail::message')
+# Application Status Update
+
+Hi {{ $candidate['fullName'] }},
+
+We wanted to keep you updated on your application for the **{{ $position }}** position.
+
+@component('mail::panel')
+**Current Status:** 
+# {{ strtoupper($status) }}
+
+@if($status === 'reviewing')
+- Your application is currently under review by our hiring team.
+- We'll contact you within 3-5 business days.
+@elseif($status === 'interview_scheduled')
+- Congratulations! You've been selected for an interview.
+- Interview Details: {{ $interviewDate }} at {{ $interviewTime }}
+@elseif($status === 'rejected')
+- Thank you for your interest. Unfortunately, we've decided to move forward with other candidates at this time.
+- We encourage you to apply for future positions that match your profile.
+@elseif($status === 'selected')
+- Great news! You've been selected for this position!
+- Our HR team will be in touch shortly with next steps and offer details.
+@endif
+@endcomponent
+
+@if($status !== 'rejected')
+@component('mail::button', ['url' => $trackingLink, 'color' => 'primary'])
+View Application
+@endcomponent
+@endif
+
+If you have any questions, feel free to contact us at [{{ config('mail.from.address') }}](mailto:{{ config('mail.from.address') }}).
+
+Best regards,  
+**{{ config('app.name') }} - Recruiting Team**
+
+@slot('footer')
+@component('mail::footer')
+© {{ date('Y') }} {{ config('app.name') }}
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## 5. Job Posted Notification (Admin)
+
+**File: `resources/views/emails/admin-job-posted.blade.php`**
+
+```blade
+@component('mail::message')
+# 📢 Job Posted Successfully
+
+The job posting has been published and is now live.
+
+@component('mail::panel')
+**Job Details**
+- **Title:** {{ $jobTitle }}
+- **Department:** {{ $department }}
+- **Posted On:** {{ $postedDate }}
+- **Visibility:** Public
+@endcomponent
+
+**Next Steps:**
+- Job posting is live and visible to candidates
+- You can share the job link on your website or social media
+- Monitor applications in your admin dashboard
+
+@component('mail::button', ['url' => $jobLink, 'color' => 'primary'])
+View Job Post
+@endcomponent
+
+**Share on Social Media:**
+- [Share on LinkedIn]({{ $linkedinShareLink }})
+- [Share on Twitter]({{ $twitterShareLink }})
+
+@slot('footer')
+@component('mail::footer')
+Admin Notification - {{ config('app.name') }}
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## 6. Rejection Email (Candidate)
+
+**File: `resources/views/emails/rejection-email.blade.php`**
+
+```blade
+@component('mail::message')
+# Application Update
+
+Hi {{ $candidate['fullName'] }},
+
+Thank you for taking the time to apply for the **{{ $position }}** position at {{ config('app.name') }}.
+
+We appreciate your interest and the effort you put into your application. After careful review, we've decided to move forward with other candidates whose qualifications more closely match our current needs.
+
+@component('mail::panel')
+This doesn't reflect on your qualifications. We received many excellent applications, and the decision was difficult.
+@endcomponent
+
+## Keep in Touch
+
+We encourage you to stay connected with us:
+- Follow us on [LinkedIn]({{ $linkedinUrl }})
+- Check back for future openings that might be a better fit
+- Feel free to reach out if you'd like feedback on your application
+
+@component('mail::button', ['url' => $otherJobsLink, 'color' => 'primary'])
+View Other Open Positions
+@endcomponent
+
+Best of luck in your job search!
+
+Warm regards,  
+**{{ config('app.name') }} - Talent Acquisition Team**
+
+@slot('footer')
+@component('mail::footer')
+© {{ date('Y') }} {{ config('app.name') }}
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## 7. Offer Letter (Candidate)
+
+**File: `resources/views/emails/offer-letter.blade.php`**
+
+```blade
+@component('mail::message')
+# 🎉 Job Offer
+
+Hi {{ $candidate['fullName'] }},
+
+Congratulations! We're delighted to extend a formal job offer for the **{{ $position }}** position at {{ config('app.name') }}.
+
+@component('mail::panel')
+**Offer Details**
+- **Position:** {{ $position }}
+- **Department:** {{ $department }}
+- **Start Date:** {{ $startDate }}
+- **Employment Type:** {{ $employmentType }}
+- **Salary:** {{ $salary }}
+- **Reports To:** {{ $reportsTo }}
+@endcomponent
+
+## What's Next?
+
+1. **Review the Offer:** Please review the attached offer letter carefully
+2. **Confirm Acceptance:** Reply to this email or [click here]({{ $acceptLink }}) to confirm
+3. **Submit Documents:** You'll receive instructions for onboarding documents
+4. **Welcome Call:** We'll schedule a welcome call before your start date
+
+@component('mail::button', ['url' => $acceptLink, 'color' => 'success'])
+Accept Offer
+@endcomponent
+
+**Important Dates:**
+- Offer Expires: {{ $offerExpires }}
+- Preferred Start Date: {{ $startDate }}
+
+If you have any questions about the offer, please don't hesitate to reach out to our HR team at [hr@{{ config('app.name') }}.com](mailto:hr@{{ config('app.name') }}.com).
+
+We're excited to welcome you to the team!
+
+Best regards,  
+**{{ config('app.name') }} - Human Resources**
+
+@slot('footer')
+@component('mail::footer')
+© {{ date('Y') }} {{ config('app.name') }}. Confidential.
+@endcomponent
+@endslot
+@endcomponent
+```
+
+---
+
+## Laravel Setup Instructions
+
+### Step 1: Create Mailable Classes
+
+```bash
+php artisan make:mail ApplicationConfirmation
+php artisan make:mail AdminNewApplication
+php artisan make:mail InterviewScheduled
+php artisan make:mail ApplicationStatusUpdate
+php artisan make:mail AdminJobPosted
+php artisan make:mail RejectionEmail
+php artisan make:mail OfferLetter
+```
+
+### Step 2: Update Mailable Classes
+
+**Example: `app/Mail/ApplicationConfirmation.php`**
+
+```php
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Envelope;
+
+class ApplicationConfirmation extends Mailable
+{
+    use Queueable;
+
+    public function __construct(
+        public array $candidate,
+        public string $position,
+        public string $appliedDate,
+        public string $applicationId,
+        public string $trackingLink
+    ) {}
+
+    public function envelope(): Envelope
+    {
+        return new Envelope(
+            subject: 'Application Confirmation - ' . $this->position,
+        );
+    }
+
+    public function content(): Content
+    {
+        return new Content(
+            view: 'emails.application-confirmation',
+        );
+    }
+}
+```
+
+### Step 3: Send Emails in Controller
+
+```php
+use App\Mail\ApplicationConfirmation;
+use Illuminate\Support\Facades\Mail;
+
+public function submit(Request $request)
+{
+    // Validate and save application...
+    
+    $candidate = [
+        'fullName' => $request->fullName,
+        'email' => $request->email,
+        'phoneNumber' => $request->phoneNumber,
+    ];
+    
+    // Send confirmation to candidate
+    Mail::to($candidate['email'])->send(new ApplicationConfirmation(
+        $candidate,
+        $request->serviceType,
+        now()->format('M d, Y'),
+        'APP-' . uniqid(),
+        route('candidate.track-application')
+    ));
+    
+    // Send notification to admin
+    Mail::to(config('mail.admin_email'))->send(new AdminNewApplication(
+        $candidate,
+        $request->serviceType,
+        now()->format('M d, Y'),
+        route('admin.applications')
+    ));
+    
+    return response()->json(['success' => true]);
+}
+```
+
+### Step 4: Configure `.env`
+
+```env
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=587
+MAIL_USERNAME=your_username
+MAIL_PASSWORD=your_password
+MAIL_FROM_ADDRESS=noreply@jobsystem.com
+MAIL_FROM_NAME="Job Management System"
+```
+
+---
+
+## Email Template Features
+
+✅ Professional design with company branding  
+✅ Mobile-responsive layouts  
+✅ Clear CTAs (Call-to-Action buttons)  
+✅ Status tracking links  
+✅ Personalized messages  
+✅ Multiple template types for different scenarios  
+✅ Easy to customize with your branding  
+
+---
+
+## Testing Emails Locally
+
+Use **Mailtrap** or **MailHog** for local testing:
+
+```bash
+# Using tinker to test
+php artisan tinker
+
+Mail::to('test@example.com')->send(
+    new \App\Mail\ApplicationConfirmation(
+        ['fullName' => 'John Doe', 'email' => 'john@example.com', 'phoneNumber' => '123456789'],
+        'React Developer',
+        now()->format('M d, Y'),
+        'APP-123',
+        'http://localhost/track'
+    )
+);
+```
+
+---
+
+## Customization Tips
+
+- Update colors in the templates to match your brand
+- Add your company logo in the header
+- Include social media links in the footer
+- Customize the CTA button text and colors
+- Add legal disclaimers as needed
+
