@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 
     <style>
-        /* Responsive map container - keeps aspect ratio and lets SVG scale */
         .map-container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
         }
+
 
         svg {
             display: block;
@@ -25,9 +25,9 @@
             max-height: 80vh;
         }
 
-        /* g[transform] {
-            transform: translate(-261px, -150px) scale(1, 1);
-        } */
+
+
+
 
         .country {
             fill: #474B54;
@@ -37,20 +37,24 @@
             cursor: pointer;
         }
 
+
         .country.highlighted {
             fill: #0F76BD;
             stroke: #0F76BD;
         }
 
 
+
         text {
             fill: #0F76BD;
         }
+
 
         /* Customize the flag indicator group */
         .flag-indicator-group {
             transition: transform 0.2s ease;
         }
+
 
         /* Circle sizing - smaller base */
         .flag-circle {
@@ -58,13 +62,17 @@
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
+
         /* Image sizing - BIGGER, goes outside circle */
         .flag-indicator-group image {
-            width: 70px;
-            /* बड़ा - circle से बाहर जाए */
-            height: 70px;
+            width: 40px;
+            height: 40px;
+            x: 16;
+            y: 16;
+
 
         }
+
 
         /* Text label styling */
         .country-label {
@@ -77,12 +85,14 @@
             /* नीचे लगाओ */
         }
 
+
         /* Responsive sizing */
         @media (max-width: 768px) {
             .flag-circle {
                 r: 20px;
                 /* circle same रहे */
             }
+
 
             .flag-indicator-group image {
                 width: 120px;
@@ -91,10 +101,12 @@
                 y: -26px;
             }
 
+
             .country-label {
                 font-size: 12px;
                 y: 75px;
             }
+
 
             circle {
                 r: 35px
@@ -103,15 +115,18 @@
 
 
 
+
         .leader-line {
-            stroke: #0F76BD;
+            stroke: #69c2ff;
             stroke-width: 4;
             fill: none;
             pointer-events: none;
-            opacity: 0.4;
+            opacity: 1;
+
             stroke-dasharray: 5, 5;
             transition: all 0.3s ease;
         }
+
 
         .leader-line.active {
             stroke: #0F76BD !important;
@@ -120,15 +135,18 @@
             stroke-dasharray: none !important;
         }
 
+
         .leader-arrow {
-            fill: #555;
+            fill: #69c2ff;
             pointer-events: none;
             transition: all 0.3s ease;
         }
 
+
         .leader-arrow.active {
             fill: #0F76BD !important;
         }
+
 
         .tippy-box[data-theme~='dark'] {
             background-color: #1e1e1e;
@@ -140,13 +158,16 @@
             box-shadow: 0 10px 32px rgba(0, 212, 255, 0.3);
         }
 
+
         .tippy-arrow {
             color: #1e1e1e !important;
         }
 
+
         .tooltip-content {
             text-align: center;
         }
+
 
         .tooltip-flag {
             width: 120px;
@@ -157,12 +178,14 @@
             border: 2px solid #0F76BD;
         }
 
+
         .tooltip-country {
             font-weight: bold;
             font-size: 16px;
             margin-bottom: 8px;
             color: #00ffff;
         }
+
 
         .tooltip-phone {
             font-size: 13px;
@@ -171,25 +194,30 @@
             margin-bottom: 8px;
         }
 
+
         .tooltip-contacts {
             border-top: 1px solid #444;
             padding-top: 8px;
             font-size: 12px;
         }
 
+
         .contact-item {
             margin: 4px 0;
             color: #aaa;
         }
 
+
         .draggable-flag {
             cursor: move;
         }
+
 
         .draggable-flag.dragging {
             opacity: 0.8;
             filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.8));
         }
+
 
         .selected-info {
             position: fixed;
@@ -205,6 +233,7 @@
             display: none;
         }
 
+
         /* Mobile: make the selected info a bottom sheet */
         @media (max-width: 768px) {
             .selected-info {
@@ -219,16 +248,19 @@
                 overflow: auto;
             }
 
+
             .country-label {
                 font-size: 20px;
                 y: 78px;
             }
         }
 
+
         .selected-info.active {
             display: block;
             animation: slideIn 0.3s ease;
         }
+
 
         @keyframes slideIn {
             from {
@@ -236,11 +268,13 @@
                 opacity: 0;
             }
 
+
             to {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
+
 
         .selected-info-header {
             font-size: 18px;
@@ -251,6 +285,7 @@
             padding-bottom: 8px;
         }
 
+
         .selected-info-flag {
             width: 100%;
             height: 120px;
@@ -259,6 +294,7 @@
             object-fit: cover;
             border: 2px solid #0F76BD;
         }
+
 
         .selected-info-item {
             margin: 8px 0;
@@ -269,10 +305,12 @@
             color: #aaa;
         }
 
+
         .selected-info-label {
             font-weight: bold;
             color: #0F76BD;
         }
+
 
         .selected-info-close {
             position: absolute;
@@ -291,6 +329,7 @@
             justify-content: center;
             font-weight: bold;
         }
+
 
         .selected-info-close:hover {
             background: #00ffff;
@@ -327,7 +366,6 @@
     </div>
 
     <script>
-        // Use a fixed viewBox for consistent scaling; CSS makes it responsive.
         const width = 1200;
         const height = 700;
 
@@ -335,58 +373,19 @@
             .attr("viewBox", `0 0 ${width} ${height}`)
             .attr("preserveAspectRatio", "xMidYMid meet");
 
+        // WIDER VIEW TO SHOW BOTH AFRICA AND INDIA
         const projection = d3.geoMercator()
-            .scale(160)
+            .center([30, 10]) // Center between Africa and India
+            .scale(280) // Wider zoom to fit both regions
             .translate([width / 2, height / 2]);
 
         const path = d3.geoPath().projection(projection);
 
         let selectedCountry = null;
         let draggedCountry = null;
-        // const zoom = d3.zoom()
-        //       .scaleExtent([1, 8])
-        //       .on("zoom", (event) => {
-        //         g.attr("transform", event.transform);
-        //         updateLeaderLines();
-        //       });    
 
-        //     svg.call(zoom);
         const countries = [{
                 id: 1,
-                name: "Freetown",
-                fullName: "Freetown, Sierra Leone",
-                country: "Sierra Leone",
-                long: -13.2317,
-                lat: 8.4657,
-                phone: "+232 786 768 49",
-                email: "freetown@sierraleone.com",
-                contact: "John Smith",
-                users: 245,
-                flagUrl: "https://flagcdn.com/w160/sl.png",
-                indicatorOffset: {
-                    x: -300,
-                    y: 120
-                }
-            },
-            {
-                id: 2,
-                name: "Monrovia",
-                fullName: "Monrovia, Liberia",
-                country: "Liberia",
-                long: -10.8070,
-                lat: 6.3155,
-                phone: "+231 775 081 433",
-                email: "monrovia@liberia.com",
-                contact: "Maria Johnson",
-                users: 189,
-                flagUrl: "https://flagcdn.com/w160/lr.png",
-                indicatorOffset: {
-                    x: -100,
-                    y: 80
-                }
-            },
-            {
-                id: 3,
                 name: "Lagos",
                 fullName: "Lagos, Nigeria",
                 country: "Nigeria",
@@ -398,34 +397,17 @@
                 users: 587,
                 flagUrl: "https://flagcdn.com/w160/ng.png",
                 indicatorOffset: {
-                    x: -20,
-                    y: -320
+                    x: 0,
+                    y: 200
                 }
             },
             {
-                id: 4,
-                name: "Ouagadougou",
-                fullName: "Ouagadougou, Burkina Faso",
-                country: "Burkina Faso",
-                long: -1.5197,
-                lat: 12.3714,
-                phone: "+226 050 546 51",
-                email: "ouagadougou@burkinafaso.com",
-                contact: "Amara Diallo",
-                users: 312,
-                flagUrl: "https://flagcdn.com/w160/bf.png",
-                indicatorOffset: {
-                    x: -100,
-                    y: -200
-                }
-            },
-            {
-                id: 5,
+                id: 2,
                 name: "Abuja",
                 fullName: "Abuja, Nigeria",
                 country: "Nigeria",
-                long: 7.0667,
-                lat: 9.0765,
+                long: 7.4937,
+                lat: 9.0579,
                 phone: "+234 816 958 1101",
                 email: "abuja@nigeria.com",
                 contact: "Chinedu Okafor",
@@ -433,11 +415,11 @@
                 flagUrl: "https://flagcdn.com/w160/ng.png",
                 indicatorOffset: {
                     x: 200,
-                    y: 20
+                    y: -50
                 }
             },
             {
-                id: 6,
+                id: 3,
                 name: "Port Harcourt",
                 fullName: "Port Harcourt, Nigeria",
                 country: "Nigeria",
@@ -449,46 +431,199 @@
                 users: 198,
                 flagUrl: "https://flagcdn.com/w160/ng.png",
                 indicatorOffset: {
-                    x: 160,
-                    y: 100
+                    x: 350,
+                    y: 10
+                }
+            },
+            {
+                id: 4,
+                name: "Kano",
+                fullName: "Kano, Nigeria",
+                country: "Nigeria",
+                long: 8.5167,
+                lat: 12.0000,
+                phone: "+234 802 000 0000",
+                email: "kano@nigeria.com",
+                contact: "Musa Ibrahim",
+                users: 420,
+                flagUrl: "https://flagcdn.com/w160/ng.png",
+                indicatorOffset: {
+                    x: -200,
+                    y: -200
+                }
+            },
+            {
+                id: 5,
+                name: "Enugu",
+                fullName: "Enugu, Nigeria",
+                country: "Nigeria",
+                long: 7.4951,
+                lat: 6.4403,
+                phone: "+234 803 000 0000",
+                email: "enugu@nigeria.com",
+                contact: "Chioma Eze",
+                users: 215,
+                flagUrl: "https://flagcdn.com/w160/ng.png",
+                indicatorOffset: {
+                    x: 50,
+                    y: 200
+                }
+            },
+            {
+                id: 6,
+                name: "Freetown",
+                fullName: "Freetown, Sierra Leone",
+                country: "Sierra Leone",
+                long: -13.2317,
+                lat: 8.4657,
+                phone: "+232 786 768 49",
+                email: "freetown@sierraleone.com",
+                contact: "John Smith",
+                users: 245,
+                flagUrl: "https://flagcdn.com/w160/sl.png",
+                indicatorOffset: {
+                    x: -120,
+                    y: 50
                 }
             },
             {
                 id: 7,
-                name: "Bamako",
-                fullName: "Bamako, Mali",
-                country: "Mali",
-                long: -8.0029,
-                lat: 12.6396,
-                phone: "+223 802 121 75",
-                email: "bamako@mali.com",
-                contact: "Tendai Mwangi",
-                users: 234,
-                flagUrl: "https://flagcdn.com/w160/ml.png",
+                name: "Monrovia",
+                fullName: "Monrovia, Liberia",
+                country: "Liberia",
+                long: -10.8070,
+                lat: 6.3155,
+                phone: "+231 775 081 433",
+                email: "monrovia@liberia.com",
+                contact: "Maria Johnson",
+                users: 189,
+                flagUrl: "https://flagcdn.com/w160/lr.png",
                 indicatorOffset: {
-                    x: -300,
-                    y: -50
+                    x: -150,
+                    y: 200
                 }
             },
             {
                 id: 8,
-                name: "Bobo-Dioulasso",
-                fullName: "Bobo-Dioulasso, Burkina Faso",
+                name: "Ouagadougou",
+                fullName: "Ouagadougou, Burkina Faso",
                 country: "Burkina Faso",
-                long: -4.3009,
-                lat: 11.1847,
+                long: -1.5197,
+                lat: 12.3714,
                 phone: "+226 050 546 51",
-                email: "bobo@burkinafaso.com",
-                contact: "Sambou Ndiaye",
-                users: 156,
+                email: "ouagadougou@burkinafaso.com",
+                contact: "Amara Diallo",
+                users: 312,
                 flagUrl: "https://flagcdn.com/w160/bf.png",
+                indicatorOffset: {
+                    x: -200,
+                    y: -110
+                }
+            },
+            {
+                id: 9,
+                name: "Yaounde",
+                fullName: "Yaounde, Cameroon",
+                country: "Cameroon",
+                long: 11.5174,
+                lat: 3.8480,
+                phone: "+237 655 000 000",
+                email: "yaounde@cameroon.com",
+                contact: "Pierre Ngono",
+                users: 278,
+                flagUrl: "https://flagcdn.com/w160/cm.png",
                 indicatorOffset: {
                     x: 100,
                     y: 200
                 }
             },
             {
-                id: 9,
+                id: 10,
+                name: "Conakry",
+                fullName: "Conakry, Guinea",
+                country: "Guinea",
+                long: -13.6785,
+                lat: 9.6412,
+                phone: "+224 621 000 000",
+                email: "conakry@guinea.com",
+                contact: "Mamadou Diallo",
+                users: 201,
+                flagUrl: "https://flagcdn.com/w160/gn.png",
+                indicatorOffset: {
+                    x: -130,
+                    y: -30
+                }
+            },
+            {
+                id: 11,
+                name: "Accra",
+                fullName: "Accra, Ghana",
+                country: "Ghana",
+                long: -0.1870,
+                lat: 5.6037,
+                phone: "+233 531 100 930",
+                email: "accra@ghana.com",
+                contact: "Kwame Asante",
+                users: 298,
+                flagUrl: "https://flagcdn.com/w160/gh.png",
+                indicatorOffset: {
+                    x: -60,
+                    y: 100
+                }
+            },
+            {
+                id: 12,
+                name: "Kumasi",
+                fullName: "Kumasi, Ghana",
+                country: "Ghana",
+                long: -1.6163,
+                lat: 6.6885,
+                phone: "+233 532 000 000",
+                email: "kumasi@ghana.com",
+                contact: "Abena Mensah",
+                users: 256,
+                flagUrl: "https://flagcdn.com/w160/gh.png",
+                indicatorOffset: {
+                    x: -100,
+                    y: 200
+                }
+            },
+            {
+                id: 13,
+                name: "Harare",
+                fullName: "Harare, Zimbabwe",
+                country: "Zimbabwe",
+                long: 31.0522,
+                lat: -17.8292,
+                phone: "+263 712 000 000",
+                email: "harare@zimbabwe.com",
+                contact: "Tendai Ncube",
+                users: 342,
+                flagUrl: "https://flagcdn.com/w160/zw.png",
+                indicatorOffset: {
+                    x: 90,
+                    y: 100
+                }
+            },
+            {
+                id: 14,
+                name: "Lusaka",
+                fullName: "Lusaka, Zambia",
+                country: "Zambia",
+                long: 28.2873,
+                lat: -15.4167,
+                phone: "+260 966 000 000",
+                email: "lusaka@zambia.com",
+                contact: "Joseph Banda",
+                users: 289,
+                flagUrl: "https://flagcdn.com/w160/zm.png",
+                indicatorOffset: {
+                    x: 120,
+                    y: 20
+                }
+            },
+            {
+                id: 15,
                 name: "Ajmer",
                 fullName: "Ajmer, India",
                 country: "India",
@@ -500,61 +635,10 @@
                 users: 445,
                 flagUrl: "https://flagcdn.com/w160/in.png",
                 indicatorOffset: {
-                    x: 200,
-                    y: -140
-                }
-            },
-            {
-                id: 10,
-                name: "Dakar",
-                fullName: "Dakar, Senegal",
-                country: "Senegal",
-                long: -17.5578,
-                lat: 14.7167,
-                phone: "+221 802 121 78",
-                email: "dakar@senegal.com",
-                contact: "Habib Diop",
-                users: 323,
-                flagUrl: "https://flagcdn.com/w160/sn.png",
-                indicatorOffset: {
-                    x: -220,
-                    y: -140
-                }
-            },
-            {
-                id: 11,
-                name: "Accra",
-                fullName: "Accra, Ghana",
-                country: "Ghana",
-                long: -0.2176,
-                lat: 5.5520,
-                phone: "+233 531 100 930",
-                email: "accra@ghana.com",
-                contact: "Kwame Asante",
-                users: 298,
-                flagUrl: "https://flagcdn.com/w160/gh.png",
-                indicatorOffset: {
                     x: -50,
-                    y: 200
+                    y: 50
                 }
             },
-            {
-                id: 12,
-                name: "Banjul",
-                fullName: "Banjul, Gambia",
-                country: "Gambia",
-                long: -16.5790,
-                lat: 13.4549,
-                phone: "+220 802 121 77",
-                email: "banjul@gambia.com",
-                contact: "Fatou Jallow",
-                users: 167,
-                flagUrl: "https://flagcdn.com/w160/gm.png",
-                indicatorOffset: {
-                    x: -180,
-                    y: 20
-                }
-            }
         ];
 
         const g1 = svg.append("g");
@@ -562,7 +646,7 @@
         const leaderLinesGroup = g1.append("g").attr("class", "leader-lines");
         const indicatorGroup = g1.append("g").attr("class", "indicators");
 
-        // Create SVG defs for circular clipping (match image size 70x70 -> r=35)
+        // Create SVG defs for circular clipping
         const defs = svg.append("defs");
         countries.forEach(country => {
             defs.append("clipPath")
@@ -578,7 +662,7 @@
             countryOffsets[c.id] = JSON.parse(JSON.stringify(c.indicatorOffset));
         });
 
-        const targetCountries = countries.map(c => c.country);
+        const targetCountries = ["Nigeria", "Sierra Leone", "Liberia", "Burkina Faso", "Cameroon", "Guinea", "Ghana", "Zimbabwe", "Zambia", "India"];
 
         function showSelectedInfo(country) {
             selectedCountry = country;
@@ -668,19 +752,6 @@
                 updateLeaderLines();
                 createIndicators();
 
-                // Center the entire map group (`g1`) inside the SVG viewBox
-                // Compute the bounding box of the rendered countries and translate g1
-                // so the map is centered on the available canvas.
-                try {
-                    const bbox = countriesGroup.node().getBBox();
-                    const centerTx = (width - bbox.width) / 2 - bbox.x;
-                    const centerTy = (height - bbox.height) / 2 - bbox.y;
-                    g1.attr("transform", `translate(${centerTx},${centerTy})`);
-                } catch (e) {
-                    // getBBox can throw if element isn't in DOM yet in some environments — ignore.
-                    console.warn('Could not compute bbox to center map:', e);
-                }
-
                 function createIndicators() {
                     countries.forEach((country) => {
                         const countryCoords = projection([country.long, country.lat]);
@@ -732,9 +803,8 @@
                         flagGroup.append("text")
                             .attr("class", "country-label")
                             .attr("x", 35)
-                            .attr("y", 90)
+                            .attr("y", 75)
                             .text(country.name);
-                       
                     });
                 }
             })

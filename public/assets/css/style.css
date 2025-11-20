@@ -2486,10 +2486,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     animation: characters 4s infinite;
     color: var(--theme-color);
     content: attr(preloader-text);
-    left: 0;
+    left: -4;
     opacity: 0;
     position: absolute;
-    top: 8px;
+    top: -3px;
     -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
     @media (width < 576px){
@@ -11901,8 +11901,12 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child>.th-post-
 .hero-style2 {
     position: relative;
     z-index: 6;
-    max-width: 451px;
+    background-color: #00000045;
+
     padding: 230px 0;
+}
+.hero-style2 .box{
+    max-width: 451px;
 }
 
 .hero-style2 .hero-title {

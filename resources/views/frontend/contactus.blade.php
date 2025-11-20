@@ -25,179 +25,313 @@
             </div>
             <div class="col-lg-4 mt-3 mt-lg-0">
                 <div class="row g-3">
-                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row  align-items-center">
-                        <img src="https://flagcdn.com/w160/in.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Ajmer</h4>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Lagos</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row2 align-items-center">
-                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Ouagadougou</h4>
-                    </div>
-                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Freetown</h4>
-                    </div>
-                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/sn.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Dakar</h4>
-                    </div>
-                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
                         <h4>Abuja</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
                         <h4>Port Harcourt</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Lagos</h4>
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Kano</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Bobo-Dioulasso</h4>
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Enugu</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Freetown</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Monrovia</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Ouagadougou</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/cm.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Yaounde</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gn.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Conakry</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
                         <h4>Accra</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/ml.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Bamako</h4>
+                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Kumasi</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/gm.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Banjul</h4>
+                        <img src="https://flagcdn.com/w160/zw.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Harare</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover  ;">
-                        <h4>Monrovia</h4>
+                        <img src="https://flagcdn.com/w160/zm.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Harare</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/in .png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>ajmer</h4>
                     </div>
                 </div>
+
             </div>
         </div>
 
 
         <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class=" tour-box th-ani gsap-cursor">
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+            <div class="row g-3">
+           
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
-                                <a href="#" style="color:#fff">Freetown, Sierra Leone</a>
+                                <a href="#"  style="color:#fff">Lagos, Nigeria</a>
                             </h3>
                         </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+23278676849</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class=" tour-box th-ani gsap-cursor">
-
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                            <h3 class="box-title">
-                                <a href="#" style="color:#fff">Monrovia, Liberia</a>
-                            </h3>
-                        </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+231 77 508 1433</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="500">
-                    <div class=" tour-box th-ani gsap-cursor">
-
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                            <h3 class="box-title">
-                                <a href="#" style="color:#fff">Lagos, Nigeria</a>
-                            </h3>
-                        </div>
-                        <div class="tour-content pt-3  text-center">
-
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">saleslos@cinderellatravel.co.in</p>
                             <p class="mb-0">+234 904 623 4551</p>
                         </div>
-
-
-
                     </div>
                 </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="600">
-                    <div class=" tour-box th-ani gsap-cursor">
 
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+           
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
-                                <a href="#" style="color:#fff">Ouagadougou, Burkina Faso</a>
+                                <a href="#"  style="color:#fff">Abuja, Nigeria</a>
                             </h3>
                         </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+226 05054651</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="700">
-                    <div class=" tour-box th-ani gsap-cursor">
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                            <h3 class="box-title">
-                                <a href="#" style="color:#fff">Abuja, Nigeria</a>
-                            </h3>
-                        </div>
-                        <div class="tour-content pt-3  text-center">
-
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesabv@cinderellatravel.co.in</p>
                             <p class="mb-0">+234 816 958 1101</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="800">
-                    <div class=" tour-box th-ani gsap-cursor">
 
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
-                                <a href="#" style="color:#fff">Port Harcourt, Nigeria</a>
+                                <a href="#"  style="color:#fff">Port Harcourt, Nigeria</a>
                             </h3>
                         </div>
-                        <div class="tour-content pt-3  text-center">
-
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">saleslos@cinderellatravel.co.in</p>
                             <p class="mb-0">+234 810 994 0319</p>
                         </div>
-
                     </div>
                 </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="900">
-                    <div class=" tour-box th-ani gsap-cursor">
 
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
-                                <a href="#" style="color:#fff">Bamako, Mali</a>
+                                <a href="#"  style="color:#fff">Kano, Nigeria</a>
                             </h3>
                         </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+232 8021 2175</p>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">reservationlos@cinderellatravel.co.in</p>
+                            <p class="mb-0">+234 904 623 4551</p>
                         </div>
-
                     </div>
                 </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1000">
-                    <div class=" tour-box th-ani gsap-cursor">
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+
+       
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
-                                <a href="#" style="color:#fff">Bobo-Dioulasso, Burkina Faso</a>
+                                <a href="#"  style="color:#fff">Enugu, Nigeria</a>
                             </h3>
                         </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+226 0505 4651</p>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">saleslos@cinderellatravel.co.in</p>
+                            <p class="mb-0">+234 904 623 4551</p>
                         </div>
-
-
                     </div>
                 </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1100">
+
+             
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Freetown, Sierra Leone</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesfna@cinderellatravel.co.in</p>
+                            <p class="mb-0">+232 80 212179</p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="700">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Monrovia, Liberia</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesrob@cinderellatravel.co.in</p>
+                            <p class="mb-0">+231 77 508 1433</p>
+                        </div>
+                    </div>
+                </div>
+
+         
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="800">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Owagadougou, Burkina Faso</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesoua@lamairatravel.com</p>
+                            <p class="mb-0">+226 05 05 46 50</p>
+                        </div>
+                    </div>
+                </div>
+
+           
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="900">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Yaounde, Cameroon</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesyao@lamairatravel.com</p>
+                            <p class="mb-0">+226 05 05 46 50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Conakry, Guinea</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salescky@lamairatravel.com</p>
+                            <p class="mb-0">+224 613 00 22 22</p>
+                        </div>
+                    </div>
+                </div>
+
+    
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Accra, Ghana</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesacc@lamairatravel.com</p>
+                            <p class="mb-0">+233 531 100 930</p>
+                        </div>
+                    </div>
+                </div>
+
+     
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Kumasi, Ghana</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">Saleskms@lamairatravel.com</p>
+                            <p class="mb-0">+233 53 110 1458</p>
+                        </div>
+                    </div>
+                </div>
+
+             
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1300">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Freetown, Sierra Leone</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesfna@lamairatravel.com</p>
+                            <p class="mb-0">+232 80808081</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1400">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Harare, Zimbabwe</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">holidayshre@lamairatravel.com</p>
+                            <p class="mb-0">+263 77 749 9936</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1500">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Harare, Zambia</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">saleslun@lamairatravel.com</p>
+                            <p class="mb-0">+260 571909379 / +260 771586081</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1600">
+                    <div class="tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#"  style="color:#fff">Freetown, Sierra Leone</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3 text-center">
+                            <p class="mb-0">salesfna@majestictravel.co.in</p>
+                            <p class="mb-0">+232 80 212180</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1100">
                     <div class=" tour-box th-ani gsap-cursor">
                         <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
@@ -205,54 +339,13 @@
                             </h3>
                         </div>
                         <div class="tour-content pt-3  text-center">
-
+                            <p class="mb-0"> salesfna@lamairatravel.com</p>
                             <p class="mb-0">+91 784 990 9355</p>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1200">
-                    <div class=" tour-box th-ani gsap-cursor">
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                            <h3 class="box-title">
-                                <a href="#" style="color:#fff">Dakar, Senegal</a>
-                            </h3>
-                        </div>
-                        <div class="tour-content pt-3  text-center">
 
-                            <p class="mb-0">+232 8021 2178</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1300">
-                    <div class=" tour-box th-ani gsap-cursor">
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                            <h3 class="box-title">
-                                <a href="#" style="color:#fff">Accra, Ghana</a>
-                            </h3>
-                        </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+233 53 110 0930</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-delay="1400">
-                    <div class=" tour-box th-ani gsap-cursor">
-                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                            <h3 class="box-title">
-                                <a href="#" style="color:#fff">Banjul, Gambia</a>
-                            </h3>
-                        </div>
-                        <div class="tour-content pt-3  text-center">
-
-                            <p class="mb-0">+232 8021 2177</p>
-                        </div>
-
-                    </div>
-                </div>
 
             </div>
         </div>

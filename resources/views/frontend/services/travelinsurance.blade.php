@@ -209,7 +209,7 @@
                         </ul>
                     </div>--}}
 
-                        <div class="widget widget_tag_cloud" data-aos="fade-left" data-aos-delay="300">
+                        <div class="widget widget_tag_cloud" data-aos="fade-left">
                             <h3 class="widget_title">Contact Us</h3>
                            <div class="th-widget-contact">
                                 <div class="info-box_text">

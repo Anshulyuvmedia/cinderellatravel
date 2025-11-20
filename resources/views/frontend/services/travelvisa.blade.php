@@ -37,24 +37,24 @@
                     <div class="row">
                         <h3 class="blog-inner-title h4 mb-2">Contact Us</h3>
                         <p class="mb-25">Reach out to us from our contact form and we will get back to you shortly.</p>
-                        <div class="col-md-6 form-group" data-aos="fade-up" data-aos-delay="1850">
+                        <div class="col-md-6 form-group">
                             <input type="text" placeholder="Full Name*" class="form-control" required>
                             <i class="far fa-user"></i>
                         </div>
-                        <div class="col-md-6 form-group" data-aos="fade-up" data-aos-delay="1900">
+                        <div class="col-md-6 form-group">
                             <input type="email" placeholder="Your Email*" class="form-control" required>
                             <i class="far fa-envelope"></i>
                         </div>
-                        <div class="col-md-6 form-group" data-aos="fade-up" data-aos-delay="1950">
+                        <div class="col-md-6 form-group">
                             <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number"
                                 class="form-control" required>
                             <i class="far fa-phone"></i>
                         </div>
-                        <div class="col-md-6 form-group" data-aos="fade-up" data-aos-delay="2000">
+                        <div class="col-md-6 form-group">
                             <input type="text" placeholder="Destination" class="form-control" required>
                             <i class="far fa-globe"></i>
                         </div>
-                        <div class="form-group col-12" data-aos="fade-up" data-aos-delay="2050">
+                        <div class="form-group col-12">
                             <select name="subject" id="subject" class="form-select nice-select">
                                 <option value="Select Tour Type" selected="selected" disabled="disabled">Select Service
                                     Type</option>
@@ -65,16 +65,16 @@
                                 <option value="Holiday Packges">Holiday Packges</option>
                             </select>
                         </div>
-                        <div class="col-12 form-group" data-aos="fade-up" data-aos-delay="2100">
+                        <div class="col-12 form-group" >
                             <textarea placeholder="Comment*" class="form-control"></textarea>
                             <i class="far fa-pencil"></i>
                         </div>
-                        <div class="col-12 form-group" data-aos="fade-up" data-aos-delay="2150">
+                        <div class="col-12 form-group" >
                             <input type="checkbox" id="html">
                             <label for="html">Save my name, email, and website in this browser for the next time I
                                 comment.</label>
                         </div>
-                        <div class="col-12 form-group mb-0" data-aos="fade-up" data-aos-delay="2200">
+                        <div class="col-12 form-group mb-0" >
                             <button class="th-btn style3 th-icon">Send Message<img src="{{ asset('assets/img/icon/plane2.svg') }}"
                                     alt=""></button>
                         </div>
@@ -84,7 +84,7 @@
             <div class="col-xxl-4 col-lg-5">
                 <aside class="sidebar-area style3 position-sticky " style="top:150px">
 
-                    <div class="widget widget_tag_cloud" data-aos="fade-left" data-aos-delay="300">
+                    <div class="widget widget_tag_cloud" data-aos="fade-left">
                         <h3 class="widget_title">Contact Us</h3>
                         <div class="th-widget-contact">
                             <div class="info-box_text">

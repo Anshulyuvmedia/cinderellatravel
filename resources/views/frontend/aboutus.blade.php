@@ -5,10 +5,10 @@
 <div class="breadcumb-wrapper" data-bg-src="{{ asset('assets/img/bg/breadcumb-bg.jpg') }}" data-aos="fade-down" data-aos-delay="100">
     <div class="container">
         <div class="breadcumb-content">
-            <h1 class="breadcumb-title">About Tourm</h1>
+            <h1 class="breadcumb-title">About Us</h1>
             <ul class="breadcumb-menu">
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li>About Tourm</li>
+                <li>About Us</li>
             </ul>
         </div>
     </div>
@@ -73,7 +73,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="title-area text-center" data-aos="fade-up" data-aos-delay="100">
-                    <span class="sub-title">Feature of the Tourm</span>
+                    <span class="sub-title">Feature </span>
                     <h2 class="sec-title">Revolutionizing the ways we travel</h2>
                 </div>
             </div>
@@ -118,7 +118,7 @@
 <section class="space">
     <div class="container">
         <div class="team-details">
-            <div class="row gy-5 mb-3 mb-xl-5 pb-xl-4">
+            <div class="row gy-5 mb-3 flex-lg-row-reverse mb-xl-5 pb-xl-4">
                 <div class="col-xl-4">
                     <div class="th-team team-grid" data-aos="fade-left" data-aos-delay="100">
                         <div class="team-img"><img src="{{ asset('assets/img/team/team_img_3.jpg') }}" alt="Team"></div>
