@@ -1,7 +1,8 @@
 @extends('frontend.layout.websitemain')
 @section('content')
 <style>
-    html,body{
+    html,
+    body {
         scroll-behavior: smooth;
     }
 </style>
@@ -28,11 +29,12 @@
                     </div>
                     <div class="page-content d-block" data-aos="fade-up" data-aos-delay="300">
                         <h2 class="box-title mt-3">Holiday Packges</h2>
-                        <p class="box-text mb-30">Land arrangement means all travel elements provided to a client after
-                            arrival at the destination, such as hotel, sightseeing, and so forth. We have partnered with
-                            local tour operators who have experience on handling tours in their destination.</p>
+                        <p class="box-text mb-30">Our <strong>holiday packages</strong> are crafted to make every traveler’s dream come true. Whether you’re planning <strong>family trips, solo travel packages,</strong> romantic getaways, group adventures, or <strong>luxury travel,</strong> we
+                            customize itineraries that match your interests and budget. From <strong>cheap vacation packages</strong> to
+                            premium <strong>luxury safari packages,</strong> we ofer the best choices for exploring the <strong>best places to travel</strong>
+                            with unforgettable experiences.</p>
 
-                        <h4 class="box-title">International Tour Packages</h4>
+                        <h4 class="box-title"><strong>Discover tours and enjoy a journey designed just for you — effortlessly.</strong></h4>
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <div class=" tour-box th-ani gsap-cursor">
