@@ -50,7 +50,7 @@
                                 {{ Str::limit($data->blogname, 30) }}
                             </a>
                         </h5>
-                        <p> {!!   Str::limit($data->blogdescription, 100) !!}</p>
+                        <div><p> {{  Str::limit(strip_tags($data->blogdescription), 100) }}</p></div>
                         <a href="{{ route('blogdetail', ['id' => $data->id]) }}" class="th-btn style4 th-icon mt-3">
                             Read More
                         </a>

@@ -12,9 +12,12 @@
                     <div class="hero-style2 w-100">
                         <div class="container">
                             <div class="box">
-                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Discover <span
+                                <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Discover<span
                                         class="hero-text">Your Dream Journey</span></h1>
-                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Lamira Tour and Travel Agency offers complete travel solutions, from air tickets and visas to insurance, hotels, and holiday packages.</p>
+                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Your Journey Starts With the Best Places to Travel
+                                    Plan unforgettable vacation trips with exclusive travel packages designed for every kind of
+                                    explorer.
+                                    Adventure awaits — where will your next vacation take you?</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="#"
                                         class="th-btn white-btn th-icon">Explore Our Services</a></div>
                             </div>
@@ -31,9 +34,9 @@
                             <div class="box">
                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Travel <span
                                         class="hero-text">With Ease</span></h1>
-                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Let Lamira handle your
-                                    travel needs with expert air ticketing, visa processing, travel insurance, hotel
-                                    bookings, and personalized holiday packages.</p>
+                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Luxury Travel & Safari Experiences
+                                    Take your vacation to the next level with curated luxury travel and exclusive luxury safari
+                                    packages — crafted to exceed expectations.</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="#"
                                         class="th-btn white-btn th-icon">Plan Your Trip</a></div>
                             </div>
@@ -51,9 +54,8 @@
                             <div class="box">
                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Embark on <span
                                         class="hero-text">Unforgettable Adventures</span></h1>
-                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">With 25 years of expertise,
-                                    Lamira Tour and Travel Agency provides comprehensive travel services, from flights
-                                    to customized holiday experiences.</p>
+                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Wherever you want to go, our best travel agency experts and top travel sites make planning
+                                    easy — from cheap vacation packages to premium tours & cruises.</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="#"
                                         class="th-btn white-btn th-icon">Discover Now</a></div>
                             </div>
@@ -70,7 +72,9 @@
                             <div class="box">
                                 <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Explore <span
                                         class="hero-text">The World Your Way</span></h1>
-                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Lamira’s all-in-one travel services include ticketing, visas, insurance, hotels, and custom holiday packages.</p>
+                                <p class="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">Thrilling Tours. Amazing Destinations. Real Experiences.
+                                    From mountains to tropical escapes, our adventure travel packages and guided tours take
+                                    you beyond the ordinary — discover the world with excitement at every step.</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.6s"><a href="#"
                                         class="th-btn white-btn th-icon">Book Your Adventure</a></div>
                             </div>
@@ -154,7 +158,7 @@
 <section class="category-area bg-top-center" data-bg-src="assets/img/bg/category_bg_1.png">
     <div class="container th-container">
         <div class="title-area text-center">
-            <!-- <span class="sub-title">Your Travel Needs, Covered</span> -->
+            <span class="sub-title">Everything You Need for the Perfect Trip</span>
             <h2 class="sec-title">Our Services</h2>
         </div>
         <div class="swiper th-slider has-shadow categorySlider" id="categorySlider1"
