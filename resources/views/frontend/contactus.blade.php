@@ -82,8 +82,24 @@
                         <h4>Harare</h4>
                     </div>
                     <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                        <img src="https://flagcdn.com/w160/in .png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <img src="https://flagcdn.com/w160/in.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
                         <h4>ajmer</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Kenema </h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ao.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Makeni </h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Ganta </h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Angola </h4>
                     </div>
                 </div>
 
@@ -331,7 +347,7 @@
                 </div>
 
 
-                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1100">
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
                     <div class=" tour-box th-ani gsap-cursor">
                         <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
                             <h3 class="box-title">
@@ -341,6 +357,62 @@
                         <div class="tour-content pt-3  text-center">
                             <p class="mb-0"> salesfna@lamairatravel.com</p>
                             <p class="mb-0">+91 784 990 9355</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Kenema, Sierra Leone</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+232 90 313132</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Luanda, Angola</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+244 976 540 535 / +232 80 212184</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Ganta, Liberia</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+231 77 450 0012</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Makeni, Sierra Leone </a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+232 80 212183</p>
                         </div>
 
                     </div>

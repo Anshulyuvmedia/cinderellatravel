@@ -432,7 +432,7 @@
                 flagUrl: "https://flagcdn.com/w160/ng.png",
                 indicatorOffset: {
                     x: 350,
-                    y: 10
+                    y: 60
                 }
             },
             {
@@ -639,6 +639,74 @@
                     y: 50
                 }
             },
+            {
+                id: 16,
+                name: "Kenema",
+                fullName: "Kenema, Sierra Leone",
+                country: "Sierra Leone",
+                long: 11.1876,
+                lat: 7.8766,
+                phone: "+232 90 313132",
+                email: "kenema@sierraleone.com",
+                contact: "John Doe",
+                users: 200,
+                flagUrl: "https://flagcdn.com/w160/sl.png",
+                indicatorOffset: {
+                    x: 280,
+                    y: 10
+                }
+            },
+            {
+                id: 17,
+                name: "Luanda",
+                fullName: "Luanda, Angola",
+                country: "Angola",
+                long: 13.2344,
+                lat: -8.8383,
+                phone: "+244 924 000 000",
+                email: "luanda@angola.com",
+                contact: "Jose Martins",
+                users: 325,
+                flagUrl: "https://flagcdn.com/w160/ao.png",
+                indicatorOffset: {
+                    x: 250,
+                    y: 100
+                }
+            },
+            {
+                id: 18,
+                name: "Ganta",
+                fullName: "Ganta, Liberia",
+                country: "Liberia",
+                long: -9.4500,
+                lat: 7.4667,
+                phone: "+231 776 000 000",
+                email: "ganta@liberia.com",
+                contact: "Samuel Cooper",
+                users: 156,
+                flagUrl: "https://flagcdn.com/w160/lr.png",
+                indicatorOffset: {
+                    x: -100,
+                    y: 150
+                }
+            },
+            {
+                id: 19,
+                name: "Makeni",
+                fullName: "Makeni, Sierra Leone",
+                country: "Sierra Leone",
+                long: -12.0500,
+                lat: 8.8870,
+                phone: "+232 787 000 000",
+                email: "makeni@sierraleone.com",
+                contact: "Ibrahim Koroma",
+                users: 178,
+                flagUrl: "https://flagcdn.com/w160/sl.png",
+                indicatorOffset: {
+                    x: -200,
+                    y: -60
+                }
+            },
         ];
 
         const g1 = svg.append("g");
@@ -654,7 +722,7 @@
                 .append("circle")
                 .attr("cx", 35)
                 .attr("cy", 35)
-                .attr("r", 20);
+                .attr("r", 15);
         });
 
         const countryOffsets = {};
@@ -789,7 +857,7 @@
                             .attr("class", "flag-circle")
                             .attr("cx", 35)
                             .attr("cy", 35)
-                            .attr("r", 20);
+                            .attr("r", 15);
 
                         // Circular flag image with clip-path
                         flagGroup.append("image")
