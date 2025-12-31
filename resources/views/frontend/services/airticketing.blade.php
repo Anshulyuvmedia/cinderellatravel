@@ -23,15 +23,11 @@
                     </div>
                     <div class="page-content d-block" data-aos="fade-up" data-aos-delay="300">
                         <h2 class="box-title mt-3">Air Ticketing</h2>
-                        <p class="box-text mb-30">Book all Domestic & International Airlines from Cinderella. Air travel
-                            is not a high-end form of travelling as it used to be. Instead, it is now seen as the
-                            fastest and cheapest way to travel. Booking International and Domestic air tickets for
-                            customers is very easy with Cinderella. As a retailer, you get the lowest flight fares,
-                            coupon fares, GDS fares, and corporate fares to offer your customers. This service comes
-                            with 24X7 customer support on hassle-free cancellation, refunds, and modifications of air
-                            tickets. We offer our retailers the best commission on booking of every International or
-                            Domestic Flight ticket.</p>
-
+                        <p class="box-text mb-30">At Lamira Travel & Tours, we provide reliable <strong>air ticketing services</strong> with access to major global
+                            airlines. Whether you are traveling for business, family vacation, or a dream holiday, we make booking fights smooth and hassle-free. Our <strong>travel agents</strong> secure the best airfare deals for both <strong>international travel</strong> and domestic routes, ensuring comfort, convenience, and budget-friendly options. With our
+                            trusted airline partners, your journey to the world’s most popular <strong>travel destinations</strong> begins with
+                            ease.</p>
+                        <p><strong>Best prices, secured reservations, and stress-free ticketing — just for you.</strong></p>
                         <div class="service-inner-img mb-40" data-aos="zoom-in" data-aos-delay="400">
                             <img src="{{ asset('assets/img/services/air2ticket.webp') }}"
                                 alt="Air Ticketing Inner Image">
@@ -109,91 +105,91 @@
                 </div>
             </div>
             <div class="col-xxl-4 col-lg-5 ">
-                <aside class="sidebar-area style3 position-sticky "  style="top:150px" >
-                   {{--   <div class="widget widget_categories">
+                <aside class="sidebar-area style3 position-sticky " style="top:150px">
+                    {{-- <div class="widget widget_categories">
                         <h3 class="widget_title">Destinations</h3>
                         <ul class="list-unstyled">
                             <li>
                                 <a href="#">
                                     <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                    Europe
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                    Asia
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                    Dubai
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                    USA
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                    Canada
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
-                                    Africa
-                                </a>
-                            </li>
-                        </ul>
-                    </div>--}}
+                    Europe
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                            Asia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                            Dubai
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                            USA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                            Canada
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/img/theme-img/map.svg') }}" alt="Map Icon">
+                            Africa
+                        </a>
+                    </li>
+                    </ul>
+            </div>--}}
 
-                    <div class="widget widget_tag_cloud " data-aos="fade-left">
-                        <h3 class="widget_title">Contact Us</h3>
-                        <div class="th-widget-contact">
-                            <div class="info-box_text">
-                                <div class="icon"><img src="{{ asset('assets/img/icon/location-dot.svg') }}"
-                                        alt="Location Icon"></div>
-                                <div class="details">
-                                    <p > 51A Wilkinson road, Freetown, Sierra Leone</p>
-                                </div>
-                            </div>
-                            <div class="info-box_text">
-                                <div class="icon"><img src="{{ asset('assets/img/icon/envelope.svg') }}"
-                                        alt="Email Icon"></div>
-                                <div class="details">
-                                    <p><a href="mailto:salesfna@lamairatravel.com"
-                                            class="info-box_link">salesfna@lamairatravel.com</a></p>
-                                </div>
-                            </div>
-                            <div class="info-box_text">
-                                <div class="icon"><img src="{{ asset('assets/img/icon/phone.svg') }}"
-                                        alt="Phone Icon"></div>
-                                <div class="details">
-                                    <p><a href="tel:+23278676849" class="info-box_link">+23278676849</a></p>
-                                </div>
-                            </div>
+            <div class="widget widget_tag_cloud " data-aos="fade-left">
+                <h3 class="widget_title">Contact Us</h3>
+                <div class="th-widget-contact">
+                    <div class="info-box_text">
+                        <div class="icon"><img src="{{ asset('assets/img/icon/location-dot.svg') }}"
+                                alt="Location Icon"></div>
+                        <div class="details">
+                            <p> 51A Wilkinson road, Freetown, Sierra Leone</p>
                         </div>
                     </div>
-                </aside>
+                    <div class="info-box_text">
+                        <div class="icon"><img src="{{ asset('assets/img/icon/envelope.svg') }}"
+                                alt="Email Icon"></div>
+                        <div class="details">
+                            <p><a href="mailto:salesfna@lamairatravel.com"
+                                    class="info-box_link">salesfna@lamairatravel.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-box_text">
+                        <div class="icon"><img src="{{ asset('assets/img/icon/phone.svg') }}"
+                                alt="Phone Icon"></div>
+                        <div class="details">
+                            <p><a href="tel:+23278676849" class="info-box_link">+23278676849</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            </aside>
         </div>
-        <div class="shape-mockup shape1 d-none d-xxl-block" data-bottom="35%" data-right="-12%" data-aos="fade-left"
-            data-aos-delay="400">
-            <img src="{{ asset('assets/img/shape/shape_1.png') }}" alt="Shape 1">
-        </div>
-        <div class="shape-mockup shape2 d-none d-xl-block" data-bottom="31%" data-right="-8%" data-aos="fade-left"
-            data-aos-delay="500">
-            <img src="{{ asset('assets/img/shape/shape_2.png') }}" alt="Shape 2">
-        </div>
-        <div class="shape-mockup shape3 d-none d-xxl-block" data-bottom="33%" data-right="-5%" data-aos="fade-left"
-            data-aos-delay="600">
-            <img src="{{ asset('assets/img/shape/shape_3.png') }}" alt="Shape 3">
-        </div>
+    </div>
+    <div class="shape-mockup shape1 d-none d-xxl-block" data-bottom="35%" data-right="-12%" data-aos="fade-left"
+        data-aos-delay="400">
+        <img src="{{ asset('assets/img/shape/shape_1.png') }}" alt="Shape 1">
+    </div>
+    <div class="shape-mockup shape2 d-none d-xl-block" data-bottom="31%" data-right="-8%" data-aos="fade-left"
+        data-aos-delay="500">
+        <img src="{{ asset('assets/img/shape/shape_2.png') }}" alt="Shape 2">
+    </div>
+    <div class="shape-mockup shape3 d-none d-xxl-block" data-bottom="33%" data-right="-5%" data-aos="fade-left"
+        data-aos-delay="600">
+        <img src="{{ asset('assets/img/shape/shape_3.png') }}" alt="Shape 3">
+    </div>
     </div>
 </section>
 @endsection

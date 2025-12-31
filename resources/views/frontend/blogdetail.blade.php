@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-xxl-8 col-lg-7">
                 <div class="th-blog blog-single">
-                    <div class="blog-img"><img src="{{asset('adminAssets/images/Blogs/'.$details->blogthumbnail)}}" alt="Blog Image"></div>
+                    <div class="blog-img"><img src="{{asset('adminAssets/images/Blogs/'.$details->blogthumbnail)}}" alt="Blog Image "></div>
                     <div class="blog-content">
                         <div class="blog-meta"><a class="author" href="#"><i class="fa-light fa-user"></i>by
                                 Lamaira Travel</a> <a href="#"><i class="fa-regular fa-calendar"></i>{{ $details->created_at->format('F j Y') }}</a></div>
@@ -38,7 +38,8 @@
                                 <div class="col-md-auto text-xl-end">
                                     <div class="share-links_wrapp"><span class="share-links-title">Share:</span>
                                         <div class="social-links"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></div>
+                                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +67,7 @@
                         <div class="recent-post-wrap">
                             @foreach ($recentblogs->take(15) as $datab)
                             <div class="recent-post">
-                                <div class="media-img"><a href="{{route('blogdetail',['id'=>$datab->id])}}"><img src="{{asset('adminAssets/images/Blogs/'.$datab->blogthumbnail)}}" alt="Blog Image"></a></div>
+                                <div class="media-img"><a href="{{route('blogdetail',['id'=>$datab->id])}}" class="d-inline-block h-100"><img src="{{asset('adminAssets/images/Blogs/'.$datab->blogthumbnail)}}" alt="Blog Image " class="h-100 object-fit-cover"></a></div>
                                 <div class="media-body">
                                     <h4 class="post-title"><a class="text-inherit" href="#">{{Str::limit($datab->blogname,50)}}</a></h4>
                                     <div class="recent-post-meta"><a href="#"><i class="fa-regular fa-calendar"></i>{{ $datab->created_at->format('F j Y') }}</a></div>

@@ -1,104 +1,107 @@
 @extends('frontend.layout.websitemain')
 @section('content')
-    <div class="breadcumb-wrapper" data-bg-src="{{ asset('assets/img/bg/breadcumb-bg.jpg') }}" data-aos="fade-down"
-        data-aos-delay="100">
-        <div class="container">
-            <div class="breadcumb-content">
-                <h1 class="breadcumb-title">Contact Us</h1>
-                <ul class="breadcumb-menu">
-                    <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
+
+
+<div class="breadcumb-wrapper" data-bg-src="{{ asset('assets/img/bg/breadcumb-bg.jpg') }}" data-aos="fade-down"
+    data-aos-delay="100">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">Contact Us</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li>Contact Us</li>
+            </ul>
         </div>
     </div>
-    <section class="testimonial-area2 overflow-hidden space" id="testi-sec">
-        <div class="container-fluid">
-            <div class="title-area text-center"><span class="sub-title">Our Branches</span>
-                <h2 class="sec-title">Making a presence in every part of the world!</h2>
+</div>
+<section class="testimonial-area2 overflow-hidden space" id="testi-sec">
+    <div class="container-fluid">
+        <div class="title-area text-center"><span class="sub-title">Our Branches</span>
+            <h2 class="sec-title">Making a presence in every part of the world!</h2>
+        </div>
+        <div class="row column-gap-3">
+            <div class="col-lg-8">
+                <x-map />
             </div>
-            <div class="row column-gap-3">
-                <div class="col-lg-8">
-                    <x-map />
-                </div>
-                <div class="col-lg-4 mt-3 mt-lg-0">
-                    <div class="row g-3">
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row align-items-center">
-                            <img src="https://flagcdn.com/w160/ng.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Lagos</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row2 align-items-center">
-                            <img src="https://flagcdn.com/w160/ng.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Abuja</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/ng.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Port Harcourt</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/ng.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Kano</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/ng.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Enugu</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/sl.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Freetown</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/lr.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Monrovia</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/bf.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Ouagadougou</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/cm.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Yaounde</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/gn.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Conakry</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/gh.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Accra</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/gh.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Kumasi</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/zw.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Harare</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/zm.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Harare</h6>
-                        </div>
-                        <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
-                            <img src="https://flagcdn.com/w160/in.png" alt=""
-                                style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
-                            <h6>Ajmer</h6>
-                        </div>
+            <div class="col-lg-4 mt-3 mt-lg-0">
+                <div class="row g-3">
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Lagos</h4>
                     </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row2 align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Abuja</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Port Harcourt</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Kano</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ng.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Enugu</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Freetown</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Monrovia</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/bf.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Ouagadougou</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/cm.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Yaounde</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gn.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Conakry</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Accra</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/gh.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Kumasi</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/zw.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Harare</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/zm.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Harare</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/in.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>ajmer</h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Kenema </h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/ao.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Makeni </h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/lr.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Ganta </h4>
+                    </div>
+                    <div class="d-flex col-6 gap-2 flex-column flex-lg-row flex-row align-items-center">
+                        <img src="https://flagcdn.com/w160/sl.png" alt="" style="width:50px ;height:50px;border-radius: 50%; object-fit: cover;">
+                        <h4>Angola </h4>
+                    </div>
+                </div>
 
                 </div>
             </div>
@@ -344,20 +347,76 @@
                     </div>
 
 
-                    <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1100">
-                        <div class=" tour-box th-ani gsap-cursor">
-                            <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
-                                <h3 class="box-title">
-                                    <a href="#" style="color:#fff">Ajmer, India</a>
-                                </h3>
-                            </div>
-                            <div class="tour-content pt-3  text-center">
-                                <p class="mb-0"> salesfna@lamairatravel.com</p>
-                                <p class="mb-0">+91 784 990 9355</p>
-                            </div>
-
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Ajmer, India</a>
+                            </h3>
                         </div>
+                        <div class="tour-content pt-3  text-center">
+                            <p class="mb-0"> salesfna@lamairatravel.com</p>
+                            <p class="mb-0">+91 784 990 9355</p>
+                        </div>
+
                     </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Kenema, Sierra Leone</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+232 90 313132</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Luanda, Angola</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+244 976 540 535 / +232 80 212184</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Ganta, Liberia</a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+231 77 450 0012</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="1700">
+                    <div class=" tour-box th-ani gsap-cursor">
+                        <div class="tour-box_img global-img  text-center p-2" style="background-color: #0E5479;">
+                            <h3 class="box-title">
+                                <a href="#" style="color:#fff">Makeni, Sierra Leone </a>
+                            </h3>
+                        </div>
+                        <div class="tour-content pt-3  text-center">
+                           
+                            <p class="mb-0">+232 80 212183</p>
+                        </div>
+
+                    </div>
+                </div>
 
 
                 </div>

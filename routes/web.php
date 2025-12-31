@@ -54,7 +54,6 @@ Route::controller(WebsiteController::class)->group(function () {
 
     Route::post('/travel-bookings',  'store')->name('travel.bookings.store');
     Route::post('/enquiry', 'enquiry')->name('enquiry');
-   
 });
 
 //Admin Panel Routes
