@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Lamira - Travel & Tour Booking Agency HTML Template - Home Travel</title>
+    <title>Lamaira - Travel & Tour Booking Agency</title>
     <meta name="author" content="Cinderella">
-    <meta name="description" content="Lamira - Travel & Tour Booking Agency HTML Template ">
-    <meta name="keywords" content="Lamira - Travel & Tour Booking Agency HTML Template ">
+    <meta name="description" content="Lamaira - Travel & Tour Booking Agency">
+    <meta name="keywords" content="Lamaira - Travel & Tour Booking Agency">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/img/logo_l.png') }}">

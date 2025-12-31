@@ -28,14 +28,14 @@
                 <div class="ps-xl-4">
                     <div class="title-area mb-20" data-aos="fade-up" data-aos-delay="500">
                         <span class="sub-title style1">Our Story</span>
-                        <h2 class="sec-title mb-20 pe-xl-5 me-xl-5 heading">Welcome to Lamira Travel & Tours</h2>
+                        <h2 class="sec-title mb-20 pe-xl-5 me-xl-5 heading">Welcome to Lamaira Travel & Tours</h2>
                     </div>
-                    <p class="pe-xl-5" data-aos="fade-up" data-aos-delay="600">Founded in 2016 in Freetown, Sierra Leone, <strong>Lamira Travel & Tours</strong> has been proudly creating high-quality travel experiences for explorers around the globe. From cultural escapes to thrilling <strong>adventure travel</strong>, we ofer expertly crafted <strong>vacation packages</strong> designed to make every moment unforgettable.</p>
+                    <p class="pe-xl-5" data-aos="fade-up" data-aos-delay="600">Founded in 2016 in Freetown, Sierra Leone, <strong>Lamaira Travel & Tours</strong> has been proudly creating high-quality travel experiences for explorers around the globe. From cultural escapes to thrilling <strong>adventure travel</strong>, we ofer expertly crafted <strong>vacation packages</strong> designed to make every moment unforgettable.</p>
 
                     <p class="mb-30 pe-xl-5" data-aos="fade-up" data-aos-delay="700">Our team of professional <strong>travel agents</strong> and passionate guides ensures you discover the world’s most captivating <strong>travel destinations</strong> with ease and comfort. We deliver trusted travel support across
                         continents — making every <strong>family trip, solo travel package,</strong> or business travel a truly memorable
                         journey.</p>
-                    <p class="my-30 pe-xl-5" data-aos="fade-up" data-aos-delay="700">At Lamira, we are dedicated to providing complete and convenient <strong>tours & travel</strong> services, including:</p>
+                    <p class="my-30 pe-xl-5" data-aos="fade-up" data-aos-delay="700">At Lamaira, we are dedicated to providing complete and convenient <strong>tours & travel</strong> services, including:</p>
                     <div class="about-item-wrap">
                         <div class="about-item style2 d-flex align-items-center" data-aos="fade-up" data-aos-delay="800">
                             <div class="about-item_img"><img src="{{ asset('assets/img/icon/check.png') }}" alt=""></div>
@@ -192,7 +192,7 @@
                             As we grow, our focus remains on innovation, quality service, and expanding our global reach-
                             ofering premium tours, <strong>cheap vacation packages,</strong> and customized travel solutions for <strong>family trips, solo travelers,</strong> and adventure seekers.
                         </p>
-                        <p>Thank you for being a part of the Lamira Travel & Tours family.</p>
+                        <p>Thank you for being a part of the Lamaira Travel & Tours family.</p>
                         <p class="team-about_text mb-25"><strong>Let’s continue discovering new destinations — together.</strong>
                         </p>
 
@@ -207,43 +207,43 @@
         <div class="container-fluid">
             <div class="slider-area">
                 <div class="swiper th-slider has-shadow" data-slider-options='{"centeredSlides":"true","breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1300":{"slidesPerView":"4"}}}' data-aos="fade-up" data-aos-delay="100">
-<div class="swiper-wrapper">
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_1.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_1.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_2.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_3.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="500">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_4.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="600">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_5.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="700">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_1.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="800">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_2.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="900">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_3.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="1000">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_4.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_5.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
+        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_2.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
+        </div>
     </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_2.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
     </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_3.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
     </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="500">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_4.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
     </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="600">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_5.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="700">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_1.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="800">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_2.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="900">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_3.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="1000">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_4.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_5.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-    <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
-        <div class="gallery-thumb style2 global-img"><img src="{{ asset('assets/img/gallery/gallery_4_2.jpg') }}" alt="Gallery Image"> <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a></div>
-    </div>
-</div>
-</div>
-</div>
-</div>
 </div>--}}
 @endsection

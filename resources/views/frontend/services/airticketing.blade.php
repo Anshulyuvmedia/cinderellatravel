@@ -23,7 +23,7 @@
                     </div>
                     <div class="page-content d-block" data-aos="fade-up" data-aos-delay="300">
                         <h2 class="box-title mt-3">Air Ticketing</h2>
-                        <p class="box-text mb-30">At Lamira Travel & Tours, we provide reliable <strong>air ticketing services</strong> with access to major global
+                        <p class="box-text mb-30">At Lamaira Travel & Tours, we provide reliable <strong>air ticketing services</strong> with access to major global
                             airlines. Whether you are traveling for business, family vacation, or a dream holiday, we make booking fights smooth and hassle-free. Our <strong>travel agents</strong> secure the best airfare deals for both <strong>international travel</strong> and domestic routes, ensuring comfort, convenience, and budget-friendly options. With our
                             trusted airline partners, your journey to the world’s most popular <strong>travel destinations</strong> begins with
                             ease.</p>
